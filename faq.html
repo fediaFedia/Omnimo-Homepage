@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta charset="UTF-8">
+<title>Omnimo UI for Rainmeter</title>
+<meta name="description" content="Omnimo is a desktop information center based on Rainmeter" />
+<meta name="keywords" content="potato, elvis, saturn" />
+<link rel="author" href="assets/humans.md" />
+<link rel="stylesheet" type="text/css" href="assets/stylesheet.css" />
+<link rel="shortcut icon" href="assets/img/favicon.ico">
+<meta name="robots" content="index, follow">
+
+
+  <script type='text/javascript' src='http://code.jquery.com/jquery-1.6.4.js'></script>
+  
+  
+  
+
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(function(){
+$('#box').keyup(function(){
+    var valThis = $(this).val().toLowerCase();
+    var noresult = 0;
+    if(valThis == ""){
+        $('.navList > li').show();
+        noresult = 1;
+	    $('.no-results-found').remove();
+    } else {
+        $('.navList > li').each(function(){
+            var text = $(this).text().toLowerCase();
+            var match = text.indexOf(valThis);
+            if (match >= 0) {
+                $(this).show();
+                noresult = 1;
+		        $('.no-results-found').remove();
+            } else {
+                $(this).hide();
+            }
+        });
+   };
+    if (noresult == 0) {
+        $(".navList").append('<li class="no-results-found">No results found.</li>');
+    }
+});
+});//]]>  
+
+</script>
+
+<style>
+h5 {font-weight:bold;}
+h5:target {
+   background-color: #ffa;
+}</style>
+
+</head>
+<body style="background-image:none;color:#494949;">
+  
+  
+
+
+
+
+<div id="navbar">
+
+<div id="navbar2">  <!-- WHY couldn't it be just one? -->
+
+<ul id="nav" class="drop">
+
+  <a href="index.html"><li>Home</li></a>
+
+    <a href="download.html"><li>Download</li></a>
+
+	  <a href="addons.html"><li>Add-ons</li></a>
+
+
+
+  
+
+  <li>Help <img src="assets/img/arrow.png" alt="V"/>
+
+    <ul style="z-index:49;">
+
+      <a href="install.html"><li style="color:#000;border:0;">Installation</li></a>
+
+      <a href="faq.html"><li style="color:#000;border:0;">F.A.Q.</li></a>
+
+      <a href="using.html"><li style="color:#000;border:0;">Using Omnimo</li></a>
+
+    </ul>
+
+  </li>
+
+  
+
+  <li>Info <img src="assets/img/arrow.png" alt="V"/>
+
+    <ul style="z-index:49;">
+
+      <a href="about.html"><li style="color:#000;border:0;">About</li></a>
+
+      <a href="donate.html"><li style="color:#000;border:0;">Donate</li></a>
+
+      <a href="feedback.html"><li style="color:#000;border:0;">Feedback</li></a>
+
+    </ul>
+
+  </li>
+
+    
+
+  
+
+</ul>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="badassbandana" id="purplecolor">&nbsp;</div>
+
+<div id="content">
+
+	 
+
+	 
+
+<div id="topfeatures"><br />
+
+
+
+
+
+
+
+	
+
+	<h1 style="font-weight:normal;">Frequently Asked Questions</h1>
+
+	<p style="font-size:10pt; width:70%;">
+
+	In a project as complex as this, problems can arise rather easily. However you may find that most of your problems can be fixed by doing simple things. We've tried covering all of the common concerns here.
+
+	<br /><br /></p>
+
+	</div>
+
+
+
+	
+<input placeholder="Search all questions" id="box" type="text" /> 
+
+<ol class="navList">
+  <li><a href="#1">Is it easy to uninstall Omnimo?</a></li>
+  <li><a href="#2">I downloaded Omnimo 6 but I don't know what to do next.</a></li>
+  <li><a href="#3">Can I use Omnimo alongside other Rainmeter skins and/or desktop icons? </a></li>
+  <li><a href="#4">How do I add/remove panels from my desktop?</a></li>
+  <li><a href="#5">How to change color skins?</a></li>
+  <li><a href="#6">How to open/close stuff manually?</a></li>
+  <li><a href="#7">Omnimo overwrote my theme which took me hours to set up</a></li>
+  <li><a href="#8">How to get my city weather code?</a></li>
+  <li><a href="#9">My mail isn't working</a></li>
+  <li><a href="#10">I closed the + button and I cant access the gallery any more.</a></li>
+  <li><a href="#11">Omnimo is slow for me</a></li>
+  <li><a href="#12">Why is my Installed Panels gallery empty?</a></li>
+  <li><a href="#13">The website is down, where can I download addons?</a></li>
+  <li><a href="#14">My clock is in military time, how to change it?</a></li>
+  <li><a href="#15">Weather forecast is in Celsius, how to change it to Fahrenheit?</a></li>
+  <li><a href="#16">I'm worried about the security of my password</a></li>
+  <li><a href="#17">My antivirus detects there might be a Trojan in this suite.</a></li>
+  <li><a href="#18">What's the secunotes/seculock password and can I change it?</a></li>
+  <li><a href="#19">I contributed to Omnimo (helping/donations etc) but I haven't received my complimentary panel pack.</a></li>
+  <li><a href="#20">I broke the configuration window somehow, how can I configure stuff now?</a></li>
+  <li><a href="#21">I found a bug in Omnimo/Translation.</a></li>
+  <li><a href="#22">How to change languages manually?</a></li>
+  <li><a href="#23">My panels can't connect to the Internet</a></li>
+  <li><a href="#24">I tried to install a add-on, but it failed saying it was unable to make a backup
+  <li><a href="#25">Why aren't the twitter panels working?</a></li>
+  <li><a href="#26">I downloaded an Add-on and I can't seem to find the rmskin file in the ZIP/can't install.</a></li>
+  <li><a href="#27">My panels are all blue, how do I make them colored individually? Or how do I change all panels to be one color?</a></li>
+  <li><a href="#28">All of my desktop icons are hidden, even after deleting Omnimo, how to get them back? </a></li>
+  <li><a href="#29">I made a nice desktop layout and I don't want to lose it.</a></li>
+  <li><a href="#30">Some panels do not snap accordingly, how can I align them?</a></li>
+  <li><a href="#31">I accidentally set a Panel\Config to be Click Through, now I can't access it.</a></li>
+  <li><a href="#32">My userpicture doesn't show</a></li>
+  <li><a href="#33">The Windows 8 shortcuts don't work</a></li>
+  <li><a href="#34">My Panels disappear when I click "Show Desktop" on Windows 7</a></li>
+  <li><a href="#35">My Google Calendar isn't working / sorts incorrectly</a></li>
+  <li><a href="#36">Which languages are available in Omnimo?</a></li>
+  <li><a href="#37">MediaControl doesn't work with my media player, what to do?</a></li>
+</ol>
+
+	
+
+
+
+	
+
+	
+
+	
+
+	<div style="vertical-align: middle; display:block; padding:25px; background-color:#fafafa; border: 1px solid #f0f0f0; width:100%;">
+
+	
+
+					
+
+					
+
+								
+
+
+
+<h5 id="1">1. Is it easy to uninstall Omnimo?</h5><br>
+
+
+
+This suite does not modify any system files or registry settings. You can simply uninstall Omnimo via the startmenu Uninstall shortcut or just delete the WP7 folder from your Documents\Rainmeter\Skins folder.
+
+<br>
+
+<hr>
+
+<h5 id="2">2. I downloaded Omnimo 6 but I don't know what to do next.</h5><br>
+
+You need to run Setup.exe. If you don't have Rainmeter installed, you will be offered to download it. If that didn't work, you can download Rainmeter 3.0 from <a href="www.rainmeter.net">rainmeter.net</a>, install Rainmeter, and after that you can install Omnimo 6 by doubleclicking the Omnimo.rmskin file.
+
+<br>
+
+<hr>
+
+
+
+<h5 id="3">3. Can I use Omnimo alongside other Rainmeter skins and/or desktop icons? </h5><br>
+
+Yes and yes! Since everything can be freely rearranged, you can use any part of Omnimo alongside other suites. You might want to close the background (right click -> close) and move things to the right to use Omnimo with your normal Desktop Icons.
+
+
+
+<br>
+
+<hr>
+
+<h5 id="4">4. How do I add/remove panels from my desktop?</h5><br>
+
+Click the + or triangle button on the desktop, select Panels and click on the panel you want to add. Click the arrow button near the Gallery text to see the next pages of the gallery items. Middle clicking closes any panel or item.You can also add stuff from the Omnimo tray icon.
+
+<br>
+
+<hr>
+
+<h5 id="5">5. How to change color skins?</h5><br>
+
+Click the + button again, and select Styles from the menu. You can change many aspects of the skins from this window. If you mess up you can always go back to the original skin by selecting the default (blue) one on the top left of the grid.
+
+<br>
+
+<hr>
+
+<h5 id="6">6. How to open/close stuff manually?</h5><br>
+
+Right click either the tray icon or any skin on the desktop, select Configs, WP7 and further folders and then open the skin. You can find many new things there that are not in the galleries too :)<br>Almost all configs in Omnimo can be closed by middle clicking. You can close stuff manually by right clicking it and selecting close skin too. Additionally if you need to close things like the background, right click the rainmeter tray icon, select your config from the menu and click close skin.<br>
+
+
+
+<br>
+
+<hr>
+
+<h5 id="7">7. Omnimo overwrote my theme which took me hours to set up</h5><br>
+
+No worries, go to RainThemes, and load a Rainstaller backup.
+
+<br>
+
+<hr>
+
+
+
+<h5 id="8">8. How to get my city weather code? </h5><br>
+
+Usually, the weather code is parsed automatically. You can type in your city in the Settings (you can access Settings from the sidebar). If you can't find your city, try this:<br>
+
+1. Go to <a href="http://weather.com/">weather.com</a>. Search your city.<br>
+
+2. You'll see something like this in your address bar:<br>
+
+http://www.weather.com/weather/today/Klaipeda+Lithuania+<b>LHXX0008</b>?lswe=klaipeda&from=searchbox_localwx
+
+
+
+<br>The highlighted part is your weather code.
+<br>
+<br>Navigate to:%USERPROFILE%\Documents\Rainmeter\Skins\WP7\resources\Common\Variables<br>Open UserVariables.inc in Notepad<br>Find GlobalWeatherCode=UKXX0085 and change the UKXX0085 (or similar) to your code. <br><br><br>Save and restart Omnimo/Rainmeter
+
+<br>
+
+<hr>
+
+<h5 id="9">9. My mail isn't working</h5><br>
+
+Click the [?] icon on the mail panel for detailed help
+
+<br>
+
+<hr>
+
+<h5 id="10">10. I closed the + button and I cant access the gallery any more.</h5><br>
+
+Right click any Omnimo item on your desktop, go to WP7 and select galleryarrow. You can access all configs from that menu. The same menu can be found by right clicking the Rainmeter tray icon.
+
+<br>
+
+<hr>
+
+<h5 id="11">11. Omnimo is slow for me</h5><br>
+
+You need to update to Rainmeter 3.0 - it's a significant improvement in performance. You should also use less interactive panels such as system monitoring and web parser modules. Omnimo was created and optimized entirely on a laptop with a 1.1GHz processor; if you don't use too many heavy panels, Omnimo should run very well even on older systems.
+
+
+
+<br>
+
+<hr>
+
+<h5 id="12">12. Why is my Installed Panels gallery empty?</h5><br>
+
+You need to download some items from <a href="http://omnimo.info/addons.html">omnimo.info/addons</a>
+
+<br>
+
+<hr>
+
+<h5 id="13">13. The website is down, where can I download addons?</h5><br>
+
+Oh great, again? Visit <a href="http://omnimoaddons.deviantart.com">Omnimo Addons</a>. The real question, however, if it's down, how are you here?
+
+<br>
+
+<hr>
+
+<h5 id="14">14. My clock is in military time, how to change it?</h5>
+
+<br>
+
+You can change the settings to Imperia in the settings. Right click the omnimo tray icon and go to Settings.
+
+<br>
+
+<hr>
+
+<h5 id="15">15. Weather forecast is in Celsius, how to change it to Fahrenheit?</h5><br>
+
+You can change the settings to Imperia in the settings. Right click the omnimo tray icon and go to Settings.
+
+<br>
+
+<hr>
+
+<h5 id="16">16. I'm worried about the security of my password</h5><br>
+
+Regular users have nothing to worry about, Rainmeter uses atom feed authentication from Google to parse new emails as well as other services. Your passwords are also secured by the configuration applet. However be advised that it's not recommended if your computer is used by anyone other than you
+
+<br>
+
+<hr>
+
+<h5 id="17">17. My antivirus detects there might be a Trojan in this suite.</h5><br>
+
+Don't worry! This is a false positive triggered by the UPX compression used in our configuration utilities. Since Omnimo 5 we reduced the amount of UPX compressed files to just 1.
+
+Please let us know which antivirus detects it so we can contact them and notify about the false positive detection.
+
+<br>
+
+
+
+<hr>
+
+<h5 id="18">18. What's the secunotes/seculock password and can I change it? </h5><br>
+
+7942, and no. SecuLock is not very secure as the title suggests either...
+
+<br>
+
+<hr>
+
+<h5 id="19">19. I contributed to Omnimo (helping/donations etc) but I haven't received my complimentary panel pack.</h5><br>
+
+Please check your spam folder. If you still can't find it, send us an email at omnimosupport[at]gmail.com. There is no auto-reply system, so please be patient.
+
+<br>
+
+<hr>
+
+<h5 id="20">20. I broke the configuration window somehow, how can I configure stuff now?</h5><br>
+
+Try not to break things so much. Also open the skin's folder and edit UserVariables.inc with notepad then.
+
+<br>
+
+<hr>
+
+<h5 id="21">21. I found a bug in Omnimo/Translation.</h5><br>
+
+
+
+We continuously try to perfect our product, however only 2 people can't make sure everything is flawless in a project this big. So please email a bug report to us at omnimosupport[at]gmail.com
+
+<br>
+
+<hr>
+
+<h5 id="22">22. How to change languages manually?</h5><br>
+
+Click the + icon, select Settings, and change the language from there. If you change it to a language you don't understand, you're gonna have a bad time.
+
+<br>
+
+<hr>
+
+<h5 id="23">23. My panels can't connect to the Internet</h5><br>
+
+Make sure your Antivirus or Firewall isn't blocking Rainmeter. Also make sure Internet Explorer is not set to offline mode.
+
+<br>
+
+<hr>
+
+<h5 id="24">24. I tried to install a add-on, but it failed saying it was unable to make a backup</h5><br>
+
+This may be a bug in Rainmeter 3.0 Beta, here's a workaround:
+
+Open AddonName.rmskin in 7zip,
+
+<br>
+
+
+
+Go to Omnimo\Skins, extract and copy the WP7 folder to Documents\Rainmeter\Skins (manually make backup of old one). After that the addons should appear in installed panels gallery. 
+
+<br>
+
+<hr>
+
+<h5 id="25">25. Why aren't the twitter panels working?</h5><br>
+
+Currently all twitter items are deliberately disabled. They will be updated once Twiter.dll plugin has been released for Rainmeter. That's what poiru said almost a year ago at least...
+
+<br>
+
+<hr>
+
+<h5 id="26">26. I downloaded an Add-on and I can't seem to find the rmskin file in the ZIP/can't install. </h5><br>
+
+Chances are you downloaded it using Internet Explorer 9, which has a bug that changes any rmskin file to zip. All addons come in rmskin by default, so either change the filename or use a different browser to download the addons.
+
+<br>
+
+<hr>
+
+<h5 id="27">27. My panels are all blue, how do I make them colored individually? Or how do I change all panels to be one color?</h5><br>
+
+Click the palette icon under the gallery arrow, that will open the style gallery. Then on the bottom click on Individual Panel Color. You can customize stuff from there. If you want to restore the default color, select a panel from the list and click Reset Color. For more info consult the Customization Guide.
+
+<br>
+
+
+
+<hr>
+
+<h5 id="28">28. All of my desktop icons are hidden, even after deleting Omnimo, how to get them back? </h5><br>
+
+Right click your desktop, under View, select Show Desktop icons. If the icons didn't show, right click it again, and again select Show Desktop Icons, then it will show them (bug in windows).
+
+<br>
+
+<hr>
+
+
+
+<h5 id="29">29. I made a nice desktop layout and I don't want to lose it.</h5><br>
+
+Omnimo 6 comes with a layouts manager. Click the triangle and select Layouts, you can save your layouts there.<br>
+
+You can also save Rainmeter themes by right clicking the tray icon, themes, manage themes and save your theme.
+
+
+
+
+
+
+
+
+
+<br>
+
+<hr>
+
+<h5 id="30">30. Some panels do not snap accordingly, how can I align them? </h5><br>
+
+You can hold the SHIFT key while dragging the panels to fine-position them. This tip along with many others can be found in the Omnimo Tips panel (recommended to read).
+
+<br>
+
+<hr>
+
+<h5 id="31">31. I accidentally set a Panel\Config to be Click Through, now I can't access it.</h5><br>
+
+
+
+Press and hold the CTRL button and right click the skin, then uncheck that option (thx brunovdbh)
+
+<br>
+
+<hr>
+
+<h5 id="32">32. My userpicture doesn't show</h5><br>
+
+Go to control panel, accounts and set your userpicture again
+
+<br>
+
+<hr>
+
+<h5 id="33">33. The Windows 8 shortcuts don't work</h5><br>
+
+You need to configure the locations for apps first. Each shortcut module has a settings icon where you can change the icon, location and action.
+
+<br>
+
+<hr>
+
+<h5 id="34">34. My Panels disappear when I click "Show Desktop" on Windows 7</h5><br>
+
+You can fix this by right clicking every panel, and under Position setting them to be "On Desktop". Using the background is not recommended with this method.
+
+<br>
+
+<hr>
+
+<h5 id="35">35. My Google Calendar isn't working / sorts incorrectly</h5><br>
+
+First, make sure you have the <a href="https://mega.co.nz/#!XcQQ2IZA!DiSn4J_kCZWxuucxIISdx0PAm0cc3RV9_EDHOoFpI9Y">latest fix</a> for the Google Calendar. After that, just follow this <a href="http://i.imgur.com/v4MARV4.png">screenshot guide</a> on how to set it up.
+
+<br>
+
+<hr>
+
+<h5 id="36">36. Which languages are available in Omnimo?</h5><br>
+
+Omnimo supports English, Spanish, German, Russian, Portuguese, French, Finnish and Dutch for now. If you want to be a volunteer translator, send us an <a href="mailto:omnimosupport@gmail.com">email</a>
+
+<br>
+
+<hr>
+
+<h5 id="37">37. MediaControl doesn't work with my media player, what to do?</h5><br>
+
+First of all, you need to make sure you're using one of these players and that you typed its setting correctly. (For example, Windows Media Player is WMP, iTunes is ITUNES, and so on) Here is a list of the players:
+<br><br>
+	<li><b>AIMP</b>: <code>PlayerName=AIMP</code><br>
+	Fully supported. Tested with AIMP 2.61.</li>
+
+	<li><b>foobar2000</b>: <code>PlayerName=CAD</code><br>
+	Fully supported. The <a href="http://poiru.github.com/foo-cad/">foo_cad plugin (download)</a> needs to be installed.</li>
+
+	<li><b>iTunes</b>: <code>PlayerName=iTunes</code><br>
+	Fully supported. Tested with iTunes 10.2.</li>
+
+	<li><b>J. River Media Center</b> and <b>Media Jukebox</b>: <code>PlayerName=CAD</code><br>
+	Fully supported through the CAD interface. The <a href="http://code.google.com/p/jr-intcad/">intcad plugin</a> needs to be installed.</li>
+
+	<li><b>MediaMonkey</b>: <code>PlayerName=MediaMonkey</code><br>
+	Fully supported. Tested with MediaMonkey 3.2.5.</li>
+
+	<li><b>MusicBee</b>: <code>PlayerName=CAD</code><br>
+	Fully supported. <a href="http://getmusicbee.com/download.html">MusicBee 1.2</a> (or higher) is required.</li>
+
+	<li><b>Winamp</b>: <code>PlayerName=Winamp</code><br>
+	Fully supported.</li>
+
+	<li><b>VLC</b>: <code>PlayerName=CAD</code><br>
+	Fully supported. The <a href="http://code.google.com/p/vlc-libcad">libcad plugin</a> for VLC must be installed.</li>
+
+	<li><b>WMP</b>: <code>PlayerName=WMP</code><br>
+	Fully supported, except for the <code>Repeat</code> / <code>Shuffle</code> types.</li>
+
+<br>
+
+<br>
+
+ ¯\(°_o)/¯ Didn't find what you're looking for? Contact <a href="mailto:omnimosupport@gmail.com" style="color:#444444;">Omnimo Support</a>
+
+
+
+					
+
+				<br>	
+
+	
+
+
+
+</div></div>
+
+
+
+
+
+	 <br><br>
+
+	 
+
+	 
+
+	 
+
+
+
+
+
+
+
+
+
+<div id="bottom">
+
+<div id="footer">
+
+<img style="float:right;" src="assets/img/marks.png" alt="Open Source, Creative Commons" />
+
+<br />
+
+<div id="socialicons">
+
+<a href="http://fediafedia.deviantart.com/" target="_blank"><img src="assets/img/da.png" alt="DeviantArt" /></a>
+
+<a href="http://facebook.com/omnimoui" target="_blank"><img src="assets/img/fb.png" alt="Facebook" /></a>
+
+<a href="http://twitter.com/fediafedia" target="_blank"><img src="assets/img/tw.png" alt="Twitter" /></a>
+
+</div>
+
+<a href="http://github.com/fediaFedia/Omnimo/" style="font-size:13pt;" target="_blank">Browse source code on GitHub</a>
+
+<br />
+
+<br />
+
+
+
+<h4>Omnimo is an open source customization project created by Xyrfo and fediaFedia <a title="Zune, Windows Phone 8, Windows 8, the Modern UI are registered trademarks of Microsoft® Corporation. Omnimo UI was created for customization purposes; with no intent to infringe upon the trademarks of Microsoft Corporation in the U.S. and/or other countries. The project is not using, even partially, any official code or images from mentioned products." class="tooltip"><span title="">[Disclaimer]</span></a></h4>
+
+<p>© 2013 Website design and coding by Ken</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+  
+</body>
+
+
+</html>
+
