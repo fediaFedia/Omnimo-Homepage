@@ -1,166 +1,130 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"> 
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Omnimo UI for Rainmeter</title>
-<meta name="description" content="Omnimo is a desktop information center based on Rainmeter" />
-<meta name="keywords" content="potato, elvis, saturn" />
-<link rel="author" href="assets/humans.md" />
-<link rel="stylesheet" type="text/css" href="assets/stylesheet.css" />
-<link rel="shortcut icon" href="assets/img/favicon.ico">
-<meta name="robots" content="index, follow">
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script type='text/javascript' src='http://code.jquery.com/jquery-1.6.4.js'></script>
-  
-  
-  
+    <link rel="author" href="assets/humans.md" />
 
+	<title>Omnimo UI for Rainmeter</title>
+	<meta name="description" content="Omnimo is a desktop information center based on Rainmeter" />
+	<meta name="keywords" content="omnimo, omnimo ui, metro, windows 7, rainmeter, tiles, panels, textitems, omnio, omino, omnomnom omnomo, fediafedia, xyrfo, deviantart, suite, theme" />
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<script type="text/javascript">
 
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-20065595-1']);
+	  _gaq.push(['_trackPageview']);
 
-<script type='text/javascript'>//<![CDATA[ 
-$(function(){
-$('#box').keyup(function(){
-    var valThis = $(this).val().toLowerCase();
-    var noresult = 0;
-    if(valThis == ""){
-        $('.navList > li').show();
-        noresult = 1;
-	    $('.no-results-found').remove();
-    } else {
-        $('.navList > li').each(function(){
-            var text = $(this).text().toLowerCase();
-            var match = text.indexOf(valThis);
-            if (match >= 0) {
-                $(this).show();
-                noresult = 1;
-		        $('.no-results-found').remove();
-            } else {
-                $(this).hide();
-            }
-        });
-   };
-    if (noresult == 0) {
-        $(".navList").append('<li class="no-results-found">No results found.</li>');
-    }
-});
-});//]]>  
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
 
-</script>
+	</script>
+	<script src="js/daylight.js"></script>
+	
+	<script>
+	$(function(){$('.fadein img:gt(0)').hide();setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);});
+	</script>
+	
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<style>
-h5 {font-weight:bold;}
-h5:target {
-   background-color: #ffa;
-}</style>
+    <!-- Custom CSS -->
+    <link href="css/omnimo.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
-<body style="background-image:none;color:#494949;">
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div style="color:#000000;" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul  style="color:#000000;"class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
   
-  
-
-
-
-
-<div id="navbar">
-
-<div id="navbar2">  <!-- WHY couldn't it be just one? -->
-
-<ul id="nav" class="drop">
-
-  <a href="index.html"><li>Home</li></a>
-
-    <a href="download.html"><li>Download</li></a>
-
-	  <a href="addons.html"><li>Add-ons</li></a>
-
-
-
-  
-
-  <li>Help <img src="assets/img/arrow.png" alt="V"/>
-
-    <ul style="z-index:49;">
-
-      <a href="install.html"><li style="color:#000;border:0;">Installation</li></a>
-
-      <a href="faq.html"><li style="color:#000;border:0;">F.A.Q.</li></a>
-
-      <a href="using.html"><li style="color:#000;border:0;">Using Omnimo</li></a>
-
-    </ul>
-
-  </li>
-
-  
-
-  <li>Info <img src="assets/img/arrow.png" alt="V"/>
-
-    <ul style="z-index:49;">
-
-      <a href="about.html"><li style="color:#000;border:0;">About</li></a>
-
-      <a href="donate.html"><li style="color:#000;border:0;">Donate</li></a>
-
-      <a href="feedback.html"><li style="color:#000;border:0;">Feedback</li></a>
-
-    </ul>
-
-  </li>
-
-    
-
-  
-
-</ul>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<div class="badassbandana" id="purplecolor">&nbsp;</div>
-
-<div id="content">
-
-	 
-
-	 
-
-<div id="topfeatures"><br />
-
-
-
-
-
-
+                      <li>
+                        <a  style="color:#000000;" class="page-scroll" href="index.html">Home</a>
+                    </li>
+              
+                    <li>
+                        <a  style="color:#000000;" class="page-scroll" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=fedia1%40gmail%2ecom&lc=US&item_name=Donate%20to%20Omnimo%20UI&currency_code=USD&bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">Donate</a>
+                    </li>
+                    <li>
+                        <a  style="color:#000000;" class="page-scroll" href="mailto:omnimosupport@gmail.com">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
 	
+	
+	 <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
 
+                
+				
+<div style="width:100%;margin-top:-100px;">
+	
+	
+	
 	<h1 style="font-weight:normal;">Frequently Asked Questions</h1>
+	
+	
+	
+	
+	  
+	<p style="font-size:10pt; text-align:left;">
 
-	<p style="font-size:10pt; width:70%;">
+	In a project as complex as this, problems can arise rather easily. However you may find that most of your problems can be fixed by doing simple things. <br>We've tried covering all of the common concerns here.
 
-	In a project as complex as this, problems can arise rather easily. However you may find that most of your problems can be fixed by doing simple things. We've tried covering all of the common concerns here.
+	</p>
 
-	<br /><br /></p>
 
-	</div>
 
 
 
 	
-<input placeholder="Search all questions" id="box" type="text" /> 
-
-<ol class="navList">
+<input placeholder="Search all questions" style="padding:5px;text-align:left;width:50%;float:left;" id="box" type="text" /> 
+<br><br><br>
+<ol class="navList" style="text-align:left;">
   <li><a href="#1">Is it easy to uninstall Omnimo?</a></li>
-  <li><a href="#2">I downloaded Omnimo 6 but I don't know what to do next.</a></li>
+  <li><a href="#2">I downloaded Omnimo 6.1 but I don't know what to do next.</a></li>
   <li><a href="#3">Can I use Omnimo alongside other Rainmeter skins and/or desktop icons? </a></li>
   <li><a href="#4">How do I add/remove panels from my desktop?</a></li>
   <li><a href="#5">How to change color skins?</a></li>
@@ -208,7 +172,7 @@ h5:target {
 
 	
 
-	<div style="vertical-align: middle; display:block; padding:25px; background-color:#fafafa; border: 1px solid #f0f0f0; width:100%;">
+	<div style="vertical-align: middle; text-align:left;display:block; padding:25px; background-color:#fafafa; border: 1px solid #f0f0f0; width:100%;">
 
 	
 
@@ -230,9 +194,9 @@ This suite does not modify any system files or registry settings. You can simply
 
 <hr>
 
-<h5 id="2">2. I downloaded Omnimo 6 but I don't know what to do next.</h5><br>
+<h5 id="2">2. I downloaded Omnimo 6.1 but I don't know what to do next.</h5><br>
 
-You need to run Setup.exe. If you don't have Rainmeter installed, you will be offered to download it. If that didn't work, you can download Rainmeter 3.0 from <a href="www.rainmeter.net">rainmeter.net</a>, install Rainmeter, and after that you can install Omnimo 6 by doubleclicking the Omnimo.rmskin file.
+You need to run Setup.exe. If you don't have Rainmeter installed, you will be offered to download it. If that didn't work, you can download Rainmeter 3.0 from <a href="www.rainmeter.net">rainmeter.net</a>, install Rainmeter, and after that you can install Omnimo 6.1 by doubleclicking the Omnimo.rmskin file.
 
 <br>
 
@@ -490,7 +454,7 @@ Right click your desktop, under View, select Show Desktop icons. If the icons di
 
 <h5 id="29">29. I made a nice desktop layout and I don't want to lose it.</h5><br>
 
-Omnimo 6 comes with a layouts manager. Click the triangle and select Layouts, you can save your layouts there.<br>
+Omnimo 6.1 comes with a layouts manager. Click the triangle and select Layouts, you can save your layouts there.<br>
 
 You can also save Rainmeter themes by right clicking the tray icon, themes, manage themes and save your theme.
 
@@ -599,81 +563,92 @@ First of all, you need to make sure you're using one of these players and that y
 
 <br>
 
- ¯\(°_o)/¯ Didn't find what you're looking for? Contact <a href="mailto:omnimosupport@gmail.com" style="color:#444444;">Omnimo Support</a>
+ ¯\(°_o)/¯ Didn't find what you're looking for? Contact <a href="mailto:omnimosupport@gmail.com" style="text-decoration:underline;font-weight:bold;color:#444444;">Omnimo Support</a>
+ 
+	
+	
+	
+	</div>
 
-
-
-					
-
-				<br>	
+	
+	
 
 	
 
+	
+
+        </div>
+    </section>
+	
+	
+	
 
 
-</div></div>
+    
+   
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">© 2018 <script language=JavaScript><!--
+var ah=new Array()
+ah[0] ="Subsidiary of the Umbrella Corporation"
+ah[1] ="Copyforward until 2019"
+ah[2] ="Not affiliated with the NSA"
+ah[3] ="Sponsor of Nicolas Cage '16 election"
+ah[4] ="As seen on TV"
+ah[5] ="Scratch here to reveal prize"
+ah[6] ="Not to be used on live cattle"
+ah[7] ="Not a Desktop Replacement"
+ah[8] ="In 216 countries"
+ah[9] ="Banned in New Zealand"
+ah[10] ="Our business is Life itself"
+
+var rN = Math.floor((ah.length)*Math.random());
+document.write(ah[rN])</script></span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="http://twitter.com/fediafedia">T</a>
+                        </li>
+                        <li><a href="http://facebook.com/omnimoui">F</a>
+                        </li>
+                        <li><a href="http://fediafedia.deviantart.com/">D</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+						
+						   <li><a href="http://github.com/fediaFedia/Omnimo/">Source Code on GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
 
 
 
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-	 <br><br>
-
-	 
-
-	 
-
-	 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
 
 
 
-
-
-
-
-
-<div id="bottom">
-
-<div id="footer">
-
-<img style="float:right;" src="assets/img/marks.png" alt="Open Source, Creative Commons" />
-
-<br />
-
-<div id="socialicons">
-
-<a href="http://fediafedia.deviantart.com/" target="_blank"><img src="assets/img/da.png" alt="DeviantArt" /></a>
-
-<a href="http://facebook.com/omnimoui" target="_blank"><img src="assets/img/fb.png" alt="Facebook" /></a>
-
-<a href="http://twitter.com/fediafedia" target="_blank"><img src="assets/img/tw.png" alt="Twitter" /></a>
-
-</div>
-
-<a href="http://github.com/fediaFedia/Omnimo/" style="font-size:13pt;" target="_blank">Browse source code on GitHub</a>
-
-<br />
-
-<br />
-
-
-
-<h4>Omnimo is an open source customization project created by Xyrfo and fediaFedia <a title="Zune, Windows Phone 8, Windows 8, the Modern UI are registered trademarks of Microsoft® Corporation. Omnimo UI was created for customization purposes; with no intent to infringe upon the trademarks of Microsoft Corporation in the U.S. and/or other countries. The project is not using, even partially, any official code or images from mentioned products." class="tooltip"><span title="">[Disclaimer]</span></a></h4>
-
-<p>© 2013 Website design and coding by Ken</p>
-
-</div>
-
-</div>
 
 </body>
 
 </html>
-
-  
-</body>
-
-
-</html>
-

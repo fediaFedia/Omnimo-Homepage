@@ -1,199 +1,458 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"> 
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Omnimo UI for Rainmeter</title>
-<meta name="description" content="Omnimo is a desktop information center based on Rainmeter" />
-<meta name="keywords" content="omnimo, omnimo ui, metro, windows 7, rainmeter, tiles, panels, textitems, omnio, omino, omnomnom omnomo, fediafedia, xyrfo, deviantart, suite, theme" />
-<link rel="author" href="assets/humans.md" />
-<link rel="stylesheet" type="text/css" href="assets/stylesheet.css" />
 
-<script type="text/javascript">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-20065595-1']);
-  _gaq.push(['_trackPageview']);
+    <link rel="author" href="assets/humans.md" />
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	<title>Omnimo UI for Rainmeter</title>
+	<meta name="description" content="Omnimo is a desktop information center based on Rainmeter" />
+	<meta name="keywords" content="omnimo, omnimo ui, metro, windows 7, rainmeter, tiles, panels, textitems, omnio, omino, omnomnom omnomo, fediafedia, xyrfo, deviantart, suite, theme" />
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<script type="text/javascript">
 
-</script>
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-20065595-1']);
+	  _gaq.push(['_trackPageview']);
 
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
 
-
-<link rel="shortcut icon" href="assets/img/favicon.ico">
-<meta name="robots" content="index, follow">
-
-
-	<!-- Add jQuery library -->
-		<script src="assets/js/jquery-1.10.1.min.js" ></script>
-
-
-	<!-- Add fancyBox main JS and CSS files -->
-	<script type="text/javascript" src="assets/js/jquery.fancybox.js?v=2.1.5"></script>
-	<link rel="stylesheet" type="text/css" href="assets/js/jquery.fancybox.css?v=2.1.5" media="screen" />
-
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
-	});
-</script>
-
+	</script>
+	<script src="js/daylight.js"></script>
 	
 	
 
-<script src="assets/js/daylight.js"></script>
-<script>
-$(function(){$('.fadein img:gt(0)').hide();setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);});
-</script>
+
+	<script>
+	$(function(){$('.fadein img:gt(0)').hide();setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);});
+	</script>
+	
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/omnimo.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                      <li>
+                        <a class="page-scroll" href="faq.html">FAQ</a>
+                    </li>
+ 
+                    <li>
+                        <a class="page-scroll" data-toggle="modal"  data-target="#donateModal" href="#donateModal" >Donate</a>
+                    </li>
+				
+                    <li>
+                        <a class="page-scroll" href="mailto:omnimosupport@gmail.com">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+			<div class="intro-heading">Omnimo UI</div>
+                <div class="intro-lead-in">Stylish, futuristic, powerful and free.<br>The Information Center for your Desktop</div>
+                
+                <a data-toggle="modal" data-target="#downloadModal" href="#downloadModal"><img src="img/download.png" id="downloadbutton" /></a>
+            </div>
+        </div>
+    </header>
+	
+	
+	 <!-- Services Section -->
+    <section  style="background:#1a1918;border-top:1px solid #494438;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+ 
+                    <h3 class="section-subheading text-muted">
+					
+					
+					 <!-- Modal -->
+<!-- Modal Video -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Video Overview</h4>
+      </div>
+      <div class="modal-body">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/-FO8xQh4PDM" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- Modal -->
 
 
-<div style="width:0px; height:0px; visibility:hidden; overflow:hidden">
-    <img src="assets/img/T1.jpg" alt="" />
-	<img src="assets/img/T2.jpg" alt="" />
-	<img src="assets/img/T3.jpg" alt="" />
-	<img src="assets/img/T4.jpg" alt="" />
-	<img src="assets/img/T5.jpg" alt="" />
-	<img src="assets/img/T6.jpg" alt="" />
-	<img src="assets/img/T7.jpg" alt="" />
-	<img src="assets/img/T8.jpg" alt="" />
-	<img src="assets/img/T9.jpg" alt="" />
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div id="donateModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+&nbsp;
+      </div>
+	  
+	  
+
+	  
+	  
+      <div class="modal-body" style="display:block;">
+	  
+          
+
+	  	  <h3>If you liked Omnimo, please consider donating</h3>
+		  <p>Donations help keep the servers on</p>
+	  
+	  
+	<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=fedia1%40gmail%2ecom&lc=US&item_name=Donate%20to%20Omnimo%20UI&currency_code=USD&bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">  <img src="img/donate.png" /></a>
+
+	
+	<p onClick="this.select();" ><b>BTC:</b> 1LrYwvooG6ckGYQB2a2fQwfpTxDn5Vzu2G</p>
+	  <p onClick="this.select();" ><b>ETH:</b> 0x0522F50dA5322DC3A71fA71D7ad064e4D27e33Fc</p>
+	  
+	  
+    </div>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+    </div>
+
+  </div>
 </div>
 
 
 
-<div id="navbar">
-<div id="navbar2">  <!-- WHY couldn't it be just one? -->
-<ul id="nav" class="drop">
-  <a href="index.html"><li>Home</li></a>
-    <a href="download.html"><li>Download</li></a>
-	  <a href="addons.html"><li>Add-ons</li></a>
-
-  
-  <li>Help <img src="assets/img/arrow.png" alt="V"/>
-    <ul style="z-index:49;">
-      <a href="install.html"><li style="color:#000;border:0;">Installation</li></a>
-      <a href="faq.html"><li style="color:#000;border:0;">F.A.Q.</li></a>
-      <a href="using.html"><li style="color:#000;border:0;">Using Omnimo</li></a>
-    </ul>
-  </li>
-  
-  <li>Info <img src="assets/img/arrow.png" alt="V"/>
-    <ul style="z-index:49;">
-      <a href="about.html"><li style="color:#000;border:0;">About</li></a>
-      <a href="donate.html"><li style="color:#000;border:0;">Donate</li></a>
-      <a href="feedback.html"><li style="color:#000;border:0;">Feedback</li></a>
-    </ul>
-  </li>
-    
-  
-</ul>
-</div>
-
-</div>
 
 
 
+<!-- Modal -->
+<div id="downloadModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-<div id="content" style="height:459px;">
-			<div id="sectionone">
-	 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+&nbsp;
+      </div>
+	  
+	  
 
-			<div class="fadein">
-			<img src="http://i.imgur.com/JaYeP.jpg" alt="" />
-			<img src="http://i.imgur.com/eyGpq.jpg" alt="" />
-			<img src="http://i.imgur.com/XZAY6.jpg" alt="" />
-			<img src="http://i.imgur.com/2dWlZ.jpg" alt="" />
-			<img src="http://i.imgur.com/eCcIF.jpg" alt="" />
-			<img src="http://i.imgur.com/SD6x1.jpg" alt="" />
-			</div>
-
-		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-
-			<div id="social">
-				<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://omnimo.info" data-count="horizontal" data-via="fediafedia">Tweet</a>
-				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fomnimoui&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;float:left;" allowTransparency="true"></iframe> 
-			</div>
-		</div>
-	 
-	 
-	 <div id="sectiontwo">
-		 <h2>Omnimo UI</h2>
-		 <h3>6.0 for <a href="http://rainmeter.net">Rainmeter</a></h3>
-		<p>Stylish, futuristic, and powerful.<br />The Information Center for Your Desktop<br /><b>Free</b> and works on any Windows version.</p>
-		 <div id="buttons">
-		 <a class="button" id="green" href="download.html"><img src='assets/img/dl.png' /><span>Download Now</span></a>
-		 
-		 <a class="button" id="blue" href="howitworks.html"><span>How it works</span></a>
-		 <span id="dummy"></span>
-		 </div>
+	  
+	  
+      <div class="modal-body" id="links" style="display:block;">
+	  
+            <div id="dllinks" class="row">
+    <div class="col-md-6"><h4>FULL VERSION</h4><p>This version contains all panels and functionality / features</p>
+	
+	<a type="button" class="btn btn-primary" target="_blank" onclick="window.location = 'Omnimo6.1.zip';$('#inst').show();$('#dllinks').hide();" data-toggle="modal" href="#">Download ZIP (25 MB)</a><br><br>
+	<sup><a target="_blank" href="http://www.mediafire.com/download/d2s25cacx489caj/Omnimo_6.0.5.zip">Mirror #1</a> | <a target="_blank" href="https://mega.co.nz/#!qN43mIbI!RtLvmEghykqpPNRDzNfec3Yhrdx5sLTiszINMn3Z-F4">Mirror #2</a></sup>
 	</div>
+	    <div class="col-md-6 disabled"><h4>LITE VERSION</h4><p>Coming soon (Jan 15)</p><!--<p>Only the most necessary elements included (can always change to full version)</p>-->
+	
+	<button type="button" class="btn btn-secondary">Download ZIP (4 MB)</button><br><br>
+	<sup><a href="24t" style="color:#ccc;">Mirror</a></sup>
+	</div>
+	
+      </div>
+
+	  	   <div id="inst" style="display:none;">
+	   
+	   <h4 style="cursor:hand;text-align:left;" onclick="$('#inst').hide();$('#dllinks').show();"><a href="#"><-</a> Quick Install Instrutions</h4>
+	   <table border="0" style="width:100%">
+  <tr>
+    <td><img style="width:143px;" src="img/1.png" /></td>
+    <td><img style="width:143px;" src="img/2.png" /></td>		
+    <td><img style="width:143px;" src="img/3.png" /></td>
+  <td><img style="width:143px;" src="img/4.png" /></td>
+  </tr>
+  <tr style="font-size:12px;">
+
+    <td><br>1. Download and<br>extract ZIP</td>
+    <td><br>2. Run Setup.exe (Ignore 3,4 if you have Rainmeter)</td>		
+    <td><br>3. Follow instructions to install Rainmeter</td>
+ <td>4. Select Install</td>
+
+  </tr>
+
+</table>
+
+
+
+
+</div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+    </div>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+    </div>
+
+  </div>
 </div>
 
 
-<div id="median">
-<div class="arrow-down"></div>
-<div id="randombramblings">
-<h6>Extensively Customizable</h6>
+<!-- Modal End -->
+					
+					<a id="greylinks" data-toggle="modal" data-target="#myModal" href="#myModal"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>&nbsp; Video Overview </a>
+					
+					&nbsp;&nbsp;&nbsp; 
+					
+					<a id="greylinks" target="_blank" href="https://www.youtube.com/watch?v=ZVDYOtkmzkA"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp; Tutorials</a>
+					&nbsp;&nbsp;&nbsp; 
+					
+					<a id="greylinks"  href="more.html"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp; How to Install</a>&nbsp;&nbsp;&nbsp; 
+										<a id="greylinks"  data-toggle="modal"  data-target="#donateModal" href="#donateModal" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp; Donate</a>
+					</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="full col-md-4">
+<img src="img/screenshots/xyrfo.jpg">
+				</div>
+                <div class="full col-md-4">
+<img src="img/screenshots/undersea.jpg">
+			   </div>
+                <div class="full col-md-4">
+<img src="img/screenshots/fly.jpg">
+				</div>
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	 <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+
+			<h3>Extensively Customizable</h3>
 <p>Omnimo comes with hundreds of widgets that you can use on your desktop. Everything can be customized precisely to your liking.</p>
 
-<h6>Simple to Use and Manage</h6>
+<h3>Simple to Use and Manage</h3>
 <p>Easy installation, easy removal. 8<a href="http://omnimo.info/faq.html#36">*</a> Languages. An out of the box experience. All you need is imagination to arrange it the way you like.</p>
 
-<h6>Light as a Feather</h6>
-<p>Despite being the most powerful suite, Omnimo is incredibly light on your PC resources. It won’t slow down your computer.</p>
-</div>
+<h3>Light as a Feather</h3>
+<p>Despite being the most powerful suite, Omnimo is incredibly light on your PC resources. It won’t slow down your computer.</p>	
+				
+				
+			  </div>
+			  
+			  
+			                  <div  id="segments" style="margin-top:20px;" class="col-md-6">
 
-<div id="pics">
-<!-- I've made the greyscale thumbnails almost greyscale, to mess with people -->
+		
+<div class="full col-md-4">
+<img src="img/screenshots/thumb1.jpg" />
 
-<a class="fancybox" href="http://i.imgur.com/H9AHP.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T1grey.jpg" onmouseover="this.src='assets/img/T1.jpg'" onmouseout="this.src='assets/img/T1grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/DxDKD.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T2grey.jpg" onmouseover="this.src='assets/img/T2.jpg'" onmouseout="this.src='assets/img/T2grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/SB4IX.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T3grey.jpg" onmouseover="this.src='assets/img/T3.jpg'" onmouseout="this.src='assets/img/T3grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/9birKfK.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T4grey.jpg" onmouseover="this.src='assets/img/T4.jpg'" onmouseout="this.src='assets/img/T4grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/2cvj2.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T5grey.jpg" onmouseover="this.src='assets/img/T5.jpg'" onmouseout="this.src='assets/img/T5grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/xVoU6.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T6grey.jpg" onmouseover="this.src='assets/img/T6.jpg'" onmouseout="this.src='assets/img/T6grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/NIz0o.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T7grey.jpg" onmouseover="this.src='assets/img/T7.jpg'" onmouseout="this.src='assets/img/T7grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/ESQqe.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T8grey.jpg" onmouseover="this.src='assets/img/T8.jpg'" onmouseout="this.src='assets/img/T8grey.jpg'" /></a>
-<a class="fancybox" href="http://i.imgur.com/BSi3y.jpg" data-fancybox-group="gallery"><img alt="Screenshot" src="assets/img/T9grey.jpg" onmouseover="this.src='assets/img/T9.jpg'" onmouseout="this.src='assets/img/T9grey.jpg'" /></a>
+<img src="img/screenshots/thumb2.jpg" />
 
+<img src="img/screenshots/thumb3.jpg" />
+</div>	 
 
+<div class="full col-md-4">
+<img src="img/screenshots/thumb4.jpg" />
 
+<img src="img/screenshots/thumb5.jpg" />
 
-
-<div style="color:grey;text-align:center;"><a href="http://imgur.com/a/nAWDo" target="_blank">View more ></a></div></div>
-</div>
-
-
-
-
-<div id="bottom">
-<div id="footer">
-
-<img style="float:right;" src="assets/img/marks.png" alt="Open Source, Creative Commons" />
-<br />
-<div id="socialicons">
-
-<a href="http://fediafedia.deviantart.com/" target="_blank"><img src="assets/img/da.png" alt="DeviantArt" /></a>
-<a href="http://facebook.com/omnimoui" target="_blank"><img src="assets/img/fb.png" alt="Facebook" /></a>
-<a href="http://twitter.com/fediafedia" target="_blank"><img src="assets/img/tw.png" alt="Twitter" /></a>
-</div>
+<img src="img/screenshots/thumb6.jpg" />
+</div>	 
 
 
+<div class="full col-md-4">
+<img src="img/screenshots/thumb7.jpg" />
 
-<a href="http://github.com/fediaFedia/Omnimo/" style="font-size:13pt;" target="_blank">Browse source code on GitHub</a>&nbsp;&nbsp;
+<img src="img/screenshots/thumb8.jpg" />
+
+<img src="img/screenshots/thumb9.jpg" />
+</div>	 
+							  
+			  </div>
+			  
+		<div style="color:grey;text-align:center;"><a href="http://imgur.com/a/nAWDo" target="_blank">View more &gt;</a></div>	  
+            </div>
+        </div>
+    </section>
+	
+	
+	
+
+    <!-- Services Section -->
+    <section id="services" style="background:#f1f1f1;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">What's new?</h2>
+                    <h3 class="section-subheading text-muted">Check out the new features we included in Omnimo 6.1</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                       <img style="width:80px;" src="img/heart.png" />
+                    </span>
+                    <h4 class="service-heading">Modernised Design</h4>
+                    <p class="text-muted">Icons, themes and resources have been updated to reflect the newest trends</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <img style="width:80px;" src="img/balloon.png" />
+                    </span>
+                    <h4 class="service-heading">Lite Version</h4>
+                    <p class="text-muted">Bloaty mega theme? No problem! We included a 4MB Lite version with bare essentials.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <img style="width:80px;" src="img/butterfly.png" />
+                    </span>
+                    <h4 class="service-heading">Bug fixes and more</h4>
+                    <p class="text-muted">It's been a long time since we updated Omnimo. Now it's better than ever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
 
 
-<br />
-<br />
 
-<h4>Omnimo is an open source customization project created by Xyrfo and fediaFedia <a title="Zune, Windows Phone 8, Windows 8, the Modern UI are registered trademarks of Microsoft® Corporation. Omnimo UI was created for customization purposes; with no intent to infringe upon the trademarks of Microsoft Corporation in the U.S. and/or other countries. The project is not using, even partially, any official code or images from mentioned products." class="tooltip"><span title="">[Disclaimer]</span></a></h4>
-<p>© 2015 <script language=JavaScript><!--
+    <!-- Clients Aside -->
+    <aside class="clients" id="segments">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/engadget.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/chip.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/computerbild.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/softpedia.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+				
+								<div class="col-md-2 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/softonic.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+				
+				<div class="col-md-2 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/creative.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    
+   
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">© 2018 <script language=JavaScript><!--
 var ah=new Array()
 ah[0] ="Subsidiary of the Umbrella Corporation"
 ah[1] ="Copyforward until 2019"
@@ -208,31 +467,80 @@ ah[9] ="Banned in New Zealand"
 ah[10] ="Our business is Life itself"
 
 var rN = Math.floor((ah.length)*Math.random());
-document.write(ah[rN])</script></p>
-</div>
+document.write(ah[rN])</script></span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="http://twitter.com/fediafedia">T</a>
+                        </li>
+                        <li><a href="http://facebook.com/omnimoui">F</a>
+                        </li>
+                        <li><a href="http://fediafedia.deviantart.com/">D</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+
+                        <li><a  onclick='alert("Software is provided as is without warranties of any kind\nUse at your own risk.");'>Terms of Use</a>
+                        </li>
+						
+						   <li><a href="http://github.com/fediaFedia/Omnimo/">Source Code on GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
 
 
-<div id="itemz" style="position:fixed; bottom:20px; right:20px; overflow:hidden;  background-color:#ccc; height:90px; z-index:17">
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 	
-	<script type="text/javascript"><!--
-	google_ad_client = "ca-pub-3193838836354850";
-	/* omnimoads */
-	google_ad_slot = "2980063218";
-	google_ad_width = 728;
-	google_ad_height = 90;
-	//-->
-	</script>
+	
+	<script type='text/javascript'>//<![CDATA[ 
+$(function(){
+$('#box').keyup(function(){
+    var valThis = $(this).val().toLowerCase();
+    var noresult = 0;
+    if(valThis == ""){
+        $('.navList > li').show();
+        noresult = 1;
+	    $('.no-results-found').remove();
+    } else {
+        $('.navList > li').each(function(){
+            var text = $(this).text().toLowerCase();
+            var match = text.indexOf(valThis);
+            if (match >= 0) {
+                $(this).show();
+                noresult = 1;
+		        $('.no-results-found').remove();
+            } else {
+                $(this).hide();
+            }
+        });
+   };
+    if (noresult == 0) {
+        $(".navList").append('<li class="no-results-found">No results found.</li>');
+    }
+});
+});//]]>  
 
-	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
+</script>
 
-</div>
-</div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
 
-<div style="position:fixed;bottom:30px;left:30px;opacity:0.8;z-index:99;color:white;"><a href="http://fediafedia.com" target="_blank"><img src="http://fediafedia.com/powered2.png" /></a></div>
+
 
 
 </body>
+
 </html>
