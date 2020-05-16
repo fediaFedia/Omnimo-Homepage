@@ -2,7 +2,7 @@
 body {
     overflow-x: hidden;
     font-family: Segoe UI, "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-
+	border-bottom:15px solid orange;
 }
 
 #segments {display:none;}
@@ -17,31 +17,52 @@ body {
 
 #downloadModal {
 
-    height: 320px;
+    height: 300px;
    
     top: 50%;
 overflow:hidden;
-    margin-top: -160px;
+    margin-top: -150px;
 
 }
 
+
+
+.mockups {width:33%;}
+
 #myModal {
 
-    height: 500px;
-   
-    top: 50%;
+   width:100%;
+
 overflow:hidden;
-    margin-top: -250px;
+
+
+}
+
+
+#myModal .modal-body {height:80vh}
+#myModal .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#myModal .modal-dialog {
+
+    width: 80%;
+    margin: 30px auto;
 
 }
 
 #donateModal {
 
-    height: 360px;
+    height: 400px;
    
     top: 50%;
 overflow:hidden;
-    margin-top: -180px;
+    margin-top: -150px;
 
 }
 
@@ -99,7 +120,7 @@ h4,
 h5,
 h6 {
 
-    font-family: Segoe UI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Segoe UI Semilight, Segoe UI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 
 }
 
@@ -936,4 +957,225 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #ff6e0e;
+}
+
+
+
+
+
+#lightbox .row > .column {
+  padding: 0 8px;
+}
+
+#lightbox .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#lightbox .column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+#lightbox .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+#lightbox .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1170px;
+}
+
+/* The Close Button */
+#lightbox .close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 50px;
+  opacity:1;
+}
+
+#lightbox .close:hover,
+#lightbox .close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+border:0;}
+
+#lightbox .mySlides {
+  display: none;
+}
+
+#lightbox .cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+#lightbox .prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+#lightbox .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+#lightbox .prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+#lightbox .prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+#lightbox .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+#lightbox img {
+  margin-bottom: -4px;
+}
+
+#lightbox .caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+#lightbox .demo {
+  opacity: 0.6;
+}
+
+#lightbox .active,
+.demo:hover {
+  opacity: 1;
+}
+
+#lightbox img.hover-shadow {
+  transition: 0.3s;
+}
+
+#lightbox .hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.lampspread.en {
+
+    background-position: 0 0;
+
+}
+.lampspread {
+
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    vertical-align: bottom;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    background-image: url(../img/lampspread.png);
+
+}
+
+.dropdown-menu {border-radius:0;}
+.language li {user-select:none;}
+
+.lampspread.english {
+    background-position: 0 0;
+}
+
+.lampspread.dk {
+    background-position: -16px 0;
+}
+
+.lampspread.dutch {
+    background-position: -32px 0;
+}
+
+.lampspread.fi {
+    background-position: -48px 0;
+}
+
+.lampspread.german {
+    background-position: -64px 0;
+}
+
+.lampspread.pl {
+    background-position: -80px 0;
+}
+
+.lampspread.french {
+    background-position: -96px 0;
+}
+
+.lampspread.russian {
+    background-position: -112px 0;
+}
+
+.lampspread.no {
+    background-position: -128px 0;
+}
+
+.lampspread.it {
+    background-position: -144px 0;
+}
+
+.lampspread.spanish {
+    background-position: -160px 0;
+}
+
+.lampspread.translator {
+    background-position: -176px 0;
+}
+
+.lampspread.ro {
+    background-position: -192px 0;
+}
+
+.lampspread.portuguese {
+    background-position: -208px 0;
+}
+
+.lampspread.vn {
+    background-position: -224px 0;
 }
