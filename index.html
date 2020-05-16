@@ -2,41 +2,17 @@
 <html lang="en">
 
 <head>
-
+<meta name="robots" content="noindex, nofollow">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index, follow">
+
     <link rel="author" href="assets/humans.md" />
 
-	<title>Omnimo UI for Rainmeter</title>
+	<title>Omnimo 10 for Rainmeter</title>
 	<meta name="description" content="Omnimo is a desktop information center based on Rainmeter" />
-	<meta name="keywords" content="omnimo, omnimo ui, metro, windows 7, rainmeter, tiles, panels, textitems, omnio, omino, omnomnom omnomo, fediafedia, xyrfo, deviantart, suite, theme" />
+	<meta name="keywords" content="omnimo, Omnimo 10, metro, windows 7, rainmeter, tiles, panels, textitems, omnio, omino, omnomnom omnomo, fediafedia, xyrfo, deviantart, suite, theme" />
 	<link rel="shortcut icon" href="img/favicon.ico">
-	
-	
-	<meta name="classification" content="Utility">
-<meta property="og:title" content="Omnimo UI for Rainmeter">
-<meta property="og:description" content="The modern information center for your Desktop">
-<meta property="og:image" content="https://fediafedia.github.io/Omnimo-Homepage/img/screenshots/undersea.jpg">
-
-<meta property="og:image:width" content="600">
-<meta property="og:image:height" content="280">
-
-<meta property="og:url" content="http://omnimo.info">
-
-
-<meta property="og:site_name" content="Omnimo UI - The modern information center for your Desktop">
-
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@fediafedia">
-<meta name="twitter:title" content="Omnimo UI - The modern information center for your Desktop">
-<meta name="twitter:description" content="Create and customize your desktop with Omnimo!">
-<meta name="twitter:image" content="https://fediafedia.github.io/Omnimo-Homepage/img/screenshots/undersea.jpg">
-<meta name="twitter:image:alt" content="Desktop Preview">
-
-
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -54,6 +30,14 @@
 	
 	
 
+    <!-- jQuery -->
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<script src="js/lang.js"></script>
+
+	
 
 	<script>
 	$(function(){$('.fadein img:gt(0)').hide();setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 5000);});
@@ -78,7 +62,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" onload="printMsg()" class="index">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -100,16 +84,37 @@
                         <a href="#page-top"></a>
                     </li>
                       <li>
-                        <a class="page-scroll" href="faq.html">FAQ</a>
+                        <a class="page-scroll" data-toggle="modal" data-target="#faqmodal" href="#faqmodal">FAQ</a>
                     </li>
  
                     <li>
-                        <a class="page-scroll" data-toggle="modal"  data-target="#donateModal" href="#donateModal" >Donate</a>
+                        <a class="page-scroll" data-toggle="modal"  data-target="#donateModal" href="#donateModal" data-translate="donate">Donate</a>
                     </li>
-				
                     <li>
-                        <a class="page-scroll" href="mailto:omnimosupport@gmail.com">Contact</a>
+                        <a class="page-scroll" href="mailto:omnimosupport@gmail.com" data-translate="contact">Contact</a>
                     </li>
+
+<li class="dropdown language">
+    <a class="dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown">
+        <span id="lampspread" class="lampspread de"></span><span data-translate="languagecode">EN</span><span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" style="background:#222;border:0;">
+                                                         
+                                                      <li id="#en" onclick='localStorage.setItem("lang", "english");location.reload();' value="english"><a>English</a></li>
+                                            <li id="#de" onclick='localStorage.setItem("lang", "german");location.reload();'  value="german"><a>Deutsch</a></li>
+									  <li id="#es" onclick='localStorage.setItem("lang", "spanish");location.reload();'  value="spanish"><a>Español</a></li>
+									  <li id="#ru" onclick='localStorage.setItem("lang", "russian");location.reload();'  value="russian"><a>Русский</a></li>
+								
+								<li id="#fr" onclick='localStorage.setItem("lang", "french");location.reload();'  value="french"><a>Français</a></li>
+                                   <li id="#pt" onclick='localStorage.setItem("lang", "portuguese");location.reload();'  value="portuguese"><a>Português</a></li>
+                               	    <li id="#nl" onclick='localStorage.setItem("lang", "dutch");location.reload();'  value="dutch"><a>Nederlands</a></li>
+                                
+                               
+                      </ul>
+</li>
+
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -121,12 +126,36 @@
     <header>
         <div class="container">
             <div class="intro-text">
-			<div class="intro-heading">Omnimo UI</div>
-                <div class="intro-lead-in">Stylish, futuristic, powerful and free.<br>The Information Center for your Desktop</div>
+			<div class="intro-heading">Omnimo 10</div>
+                <div class="intro-lead-in"><span  data-translate="stylish">Stylish, futuristic, powerful and free.</span><br><span data-translate="infocenter">The Information Center for your Desktop</span></div>
                 
-                <a data-toggle="modal" data-target="#downloadModal" href="#downloadModal"><img src="img/download.png" id="downloadbutton" /></a>
-            </div>
+                <a data-toggle="modal" data-target="#downloadModal" href="#downloadModal">
+				<img src="img/download.png" id="downloadbutton" /><br>
+				  <p style="  text-transform: uppercase;margin-top:-15px;font-size:14px;color:white;" data-translate="download">Download</p>
+				</a>
+        
+		  </div>
         </div>
+		           
+        <div class="container">
+				   <div class="row text-center">
+                <div class="full col-md-12">
+				
+				
+		
+		<div style="text-align:right;float:right;background:none;width:250px;height:50px;">
+		
+		<a href="https://twitter.com/intent/tweet?button_hashtag=Omnimo&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-related="omnimo,fediafedia" data-show-count="false">Tweet #Omnimo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fomnimoui&width=86&layout=button_count&action=like&size=small&share=false&height=21&appId" width="86" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+		
+		
+		
+		
+		</div>
+		
+		</div>	</div>
+		
+		</div>
     </header>
 	
 	
@@ -148,10 +177,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Video Overview</h4>
+        <h4 class="modal-title" data-translate="videooverview">Video Overview</h4>
       </div>
       <div class="modal-body">
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/-FO8xQh4PDM" frameborder="0" allowfullscreen></iframe>
+     <iframe id="videopromo" width="100%" height="100%" src="https://www.youtube.com/embed/S3sJ1Rh185Q" frameborder="0" allowfullscreen></iframe>
       </div>
 
     </div>
@@ -166,6 +195,488 @@
 
 
 
+
+<!-- Modal Video -->
+<div id="faqmodal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" data-translate="faq">Frequently Asked Questions</h4>
+      </div>
+      <div class="modal-body">
+
+	  
+	  
+	<p style="font-size:10pt; text-align:left;">
+
+	In a project as complex as this, problems can arise rather easily. However you may find that most of your problems can be fixed by doing simple things. We've tried covering all of the common concerns here.
+
+	</p>
+
+
+
+
+
+	
+<input placeholder="Search all questions" style="padding:5px;text-align:left;width:50%;float:left;" id="box" type="text" /> 
+<br><br><br>
+<ol class="navList" style="text-align:left;">
+  <li><a href="#1">Is it easy to uninstall Omnimo?</a></li>
+  <li><a href="#2">I downloaded Omnimo 10 but I don't know what to do next.</a></li>
+  <li><a href="#3">Can I use Omnimo alongside other Rainmeter skins and/or desktop icons? </a></li>
+  <li><a href="#4">How do I add/remove panels from my desktop?</a></li>
+  <li><a href="#5">How to change color skins?</a></li>
+  <li><a href="#6">How to open/close stuff manually?</a></li>
+  <li><a href="#7">Omnimo overwrote my theme which took me hours to set up</a></li>
+  <li><a href="#8">How to get my city weather code?</a></li>
+  <li><a href="#9">My mail isn't working</a></li>
+  <li><a href="#10">I closed the + button and I cant access the gallery any more.</a></li>
+  <li><a href="#11">Omnimo is slow for me</a></li>
+  <li><a href="#12">Why is my Installed Panels gallery empty?</a></li>
+  <li><a href="#13">The website is down, where can I download addons?</a></li>
+  <li><a href="#14">My clock is in military time, how to change it?</a></li>
+  <li><a href="#15">Weather forecast is in Celsius, how to change it to Fahrenheit?</a></li>
+  <li><a href="#16">I'm worried about the security of my password</a></li>
+  <li><a href="#17">My antivirus detects there might be a Trojan in this suite.</a></li>
+  <li><a href="#18">What's the secunotes/seculock password and can I change it?</a></li>
+  <li><a href="#19">I contributed to Omnimo (helping/donations etc) but I haven't received my complimentary panel pack.</a></li>
+  <li><a href="#20">I broke the configuration window somehow, how can I configure stuff now?</a></li>
+  <li><a href="#21">I found a bug in Omnimo/Translation.</a></li>
+  <li><a href="#22">How to change languages manually?</a></li>
+  <li><a href="#23">My panels can't connect to the Internet</a></li>
+  <li><a href="#24">I tried to install a add-on, but it failed saying it was unable to make a backup
+  <li><a href="#25">Why aren't the twitter panels working?</a></li>
+  <li><a href="#26">I downloaded an Add-on and I can't seem to find the rmskin file in the ZIP/can't install.</a></li>
+  <li><a href="#27">My panels are all blue, how do I make them colored individually? Or how do I change all panels to be one color?</a></li>
+  <li><a href="#28">All of my desktop icons are hidden, even after deleting Omnimo, how to get them back? </a></li>
+  <li><a href="#29">I made a nice desktop layout and I don't want to lose it.</a></li>
+  <li><a href="#30">Some panels do not snap accordingly, how can I align them?</a></li>
+  <li><a href="#31">I accidentally set a Panel\Config to be Click Through, now I can't access it.</a></li>
+  <li><a href="#32">My userpicture doesn't show</a></li>
+  <li><a href="#33">The Windows 8 shortcuts don't work</a></li>
+  <li><a href="#34">My Panels disappear when I click "Show Desktop" on Windows 7</a></li>
+  <li><a href="#35">My Google Calendar isn't working / sorts incorrectly</a></li>
+  <li><a href="#36">Which languages are available in Omnimo?</a></li>
+  <li><a href="#37">MediaControl doesn't work with my media player, what to do?</a></li>
+</ol>
+
+	
+
+
+
+	
+
+	
+
+	
+
+	<div style="vertical-align: middle; text-align:left;display:block; padding:25px; background-color:#fafafa; border: 1px solid #f0f0f0; width:100%;">
+
+	
+
+					
+
+					
+
+								
+
+
+
+<h5 id="1">1. Is it easy to uninstall Omnimo?</h5><br>
+
+
+
+This suite does not modify any system files or registry settings. You can simply uninstall Omnimo via the startmenu Uninstall shortcut or just delete the WP7 folder from your Documents\Rainmeter\Skins folder.
+
+<br>
+
+<hr>
+
+<h5 id="2">2. I downloaded Omnimo 10 but I don't know what to do next.</h5><br>
+
+You need to run Setup.exe. If you don't have Rainmeter installed, you will be offered to download it. If that didn't work, you can download Rainmeter 3.0 from <a href="www.rainmeter.net">rainmeter.net</a>, install Rainmeter, and after that you can install Omnimo 10 by doubleclicking the Omnimo.rmskin file.
+
+<br>
+
+<hr>
+
+
+
+<h5 id="3">3. Can I use Omnimo alongside other Rainmeter skins and/or desktop icons? </h5><br>
+
+Yes and yes! Since everything can be freely rearranged, you can use any part of Omnimo alongside other suites. You might want to close the background (right click -> close) and move things to the right to use Omnimo with your normal Desktop Icons.
+
+
+
+<br>
+
+<hr>
+
+<h5 id="4">4. How do I add/remove panels from my desktop?</h5><br>
+
+Click the + or triangle button on the desktop, select Panels and click on the panel you want to add. Click the arrow button near the Gallery text to see the next pages of the gallery items. Middle clicking closes any panel or item.You can also add stuff from the Omnimo tray icon.
+
+<br>
+
+<hr>
+
+<h5 id="5">5. How to change color skins?</h5><br>
+
+Click the + button again, and select Styles from the menu. You can change many aspects of the skins from this window. If you mess up you can always go back to the original skin by selecting the default (blue) one on the top left of the grid.
+
+<br>
+
+<hr>
+
+<h5 id="6">6. How to open/close stuff manually?</h5><br>
+
+Right click either the tray icon or any skin on the desktop, select Configs, WP7 and further folders and then open the skin. You can find many new things there that are not in the galleries too :)<br>Almost all configs in Omnimo can be closed by middle clicking. You can close stuff manually by right clicking it and selecting close skin too. Additionally if you need to close things like the background, right click the rainmeter tray icon, select your config from the menu and click close skin.<br>
+
+
+
+<br>
+
+<hr>
+
+<h5 id="7">7. Omnimo overwrote my theme which took me hours to set up</h5><br>
+
+No worries, go to RainThemes, and load a Rainstaller backup.
+
+<br>
+
+<hr>
+
+
+
+<h5 id="8">8. How to get my city weather code? </h5><br>
+
+Usually, the weather code is parsed automatically. You can type in your city in the Settings (you can access Settings from the sidebar). If you can't find your city, try this:<br>
+
+1. Go to <a href="http://weather.com/">weather.com</a>. Search your city.<br>
+
+2. You'll see something like this in your address bar:<br>
+
+http://www.weather.com/weather/today/Klaipeda+Lithuania+<b>LHXX0008</b>?lswe=klaipeda&from=searchbox_localwx
+
+
+
+<br>The highlighted part is your weather code.
+<br>
+<br>Navigate to:%USERPROFILE%\Documents\Rainmeter\Skins\WP7\resources\Common\Variables<br>Open UserVariables.inc in Notepad<br>Find GlobalWeatherCode=UKXX0085 and change the UKXX0085 (or similar) to your code. <br><br><br>Save and restart Omnimo/Rainmeter
+
+<br>
+
+<hr>
+
+<h5 id="9">9. My mail isn't working</h5><br>
+
+Click the [?] icon on the mail panel for detailed help
+
+<br>
+
+<hr>
+
+<h5 id="10">10. I closed the + button and I cant access the gallery any more.</h5><br>
+
+Right click any Omnimo item on your desktop, go to WP7 and select galleryarrow. You can access all configs from that menu. The same menu can be found by right clicking the Rainmeter tray icon.
+
+<br>
+
+<hr>
+
+<h5 id="11">11. Omnimo is slow for me</h5><br>
+
+You need to update to Rainmeter 3.0 - it's a significant improvement in performance. You should also use less interactive panels such as system monitoring and web parser modules. Omnimo was created and optimized entirely on a laptop with a 1.1GHz processor; if you don't use too many heavy panels, Omnimo should run very well even on older systems.
+
+
+
+<br>
+
+<hr>
+
+<h5 id="12">12. Why is my Installed Panels gallery empty?</h5><br>
+
+You need to download some items from <a href="http://omnimo.info/addons.html">omnimo.info/addons</a>
+
+<br>
+
+<hr>
+
+<h5 id="13">13. The website is down, where can I download addons?</h5><br>
+
+Oh great, again? Visit <a href="http://omnimoaddons.deviantart.com">Omnimo Addons</a>. The real question, however, if it's down, how are you here?
+
+<br>
+
+<hr>
+
+<h5 id="14">14. My clock is in military time, how to change it?</h5>
+
+<br>
+
+You can change the settings to Imperia in the settings. Right click the omnimo tray icon and go to Settings.
+
+<br>
+
+<hr>
+
+<h5 id="15">15. Weather forecast is in Celsius, how to change it to Fahrenheit?</h5><br>
+
+You can change the settings to Imperia in the settings. Right click the omnimo tray icon and go to Settings.
+
+<br>
+
+<hr>
+
+<h5 id="16">16. I'm worried about the security of my password</h5><br>
+
+Regular users have nothing to worry about, Rainmeter uses atom feed authentication from Google to parse new emails as well as other services. Your passwords are also secured by the configuration applet. However be advised that it's not recommended if your computer is used by anyone other than you
+
+<br>
+
+<hr>
+
+<h5 id="17">17. My antivirus detects there might be a Trojan in this suite.</h5><br>
+
+Don't worry! This is a false positive triggered by the UPX compression used in our configuration utilities. Since Omnimo 5 we reduced the amount of UPX compressed files to just 1.
+
+Please let us know which antivirus detects it so we can contact them and notify about the false positive detection.
+
+<br>
+
+
+
+<hr>
+
+<h5 id="18">18. What's the secunotes/seculock password and can I change it? </h5><br>
+
+7942, and no. SecuLock is not very secure as the title suggests either...
+
+<br>
+
+<hr>
+
+<h5 id="19">19. I contributed to Omnimo (helping/donations etc) but I haven't received my complimentary panel pack.</h5><br>
+
+Please check your spam folder. If you still can't find it, send us an email at omnimosupport[at]gmail.com. There is no auto-reply system, so please be patient.
+
+<br>
+
+<hr>
+
+<h5 id="20">20. I broke the configuration window somehow, how can I configure stuff now?</h5><br>
+
+Try not to break things so much. Also open the skin's folder and edit UserVariables.inc with notepad then.
+
+<br>
+
+<hr>
+
+<h5 id="21">21. I found a bug in Omnimo/Translation.</h5><br>
+
+
+
+We continuously try to perfect our product, however only 2 people can't make sure everything is flawless in a project this big. So please email a bug report to us at omnimosupport[at]gmail.com
+
+<br>
+
+<hr>
+
+<h5 id="22">22. How to change languages manually?</h5><br>
+
+Click the + icon, select Settings, and change the language from there. If you change it to a language you don't understand, you're gonna have a bad time.
+
+<br>
+
+<hr>
+
+<h5 id="23">23. My panels can't connect to the Internet</h5><br>
+
+Make sure your Antivirus or Firewall isn't blocking Rainmeter. Also make sure Internet Explorer is not set to offline mode.
+
+<br>
+
+<hr>
+
+<h5 id="24">24. I tried to install a add-on, but it failed saying it was unable to make a backup</h5><br>
+
+This may be a bug in Rainmeter 3.0 Beta, here's a workaround:
+
+Open AddonName.rmskin in 7zip,
+
+<br>
+
+
+
+Go to Omnimo\Skins, extract and copy the WP7 folder to Documents\Rainmeter\Skins (manually make backup of old one). After that the addons should appear in installed panels gallery. 
+
+<br>
+
+<hr>
+
+<h5 id="25">25. Why aren't the twitter panels working?</h5><br>
+
+Currently all twitter items are deliberately disabled. They will be updated once Twiter.dll plugin has been released for Rainmeter. That's what poiru said almost a year ago at least...
+
+<br>
+
+<hr>
+
+<h5 id="26">26. I downloaded an Add-on and I can't seem to find the rmskin file in the ZIP/can't install. </h5><br>
+
+Chances are you downloaded it using Internet Explorer 9, which has a bug that changes any rmskin file to zip. All addons come in rmskin by default, so either change the filename or use a different browser to download the addons.
+
+<br>
+
+<hr>
+
+<h5 id="27">27. My panels are all blue, how do I make them colored individually? Or how do I change all panels to be one color?</h5><br>
+
+Click the palette icon under the gallery arrow, that will open the style gallery. Then on the bottom click on Individual Panel Color. You can customize stuff from there. If you want to restore the default color, select a panel from the list and click Reset Color. For more info consult the Customization Guide.
+
+<br>
+
+
+
+<hr>
+
+<h5 id="28">28. All of my desktop icons are hidden, even after deleting Omnimo, how to get them back? </h5><br>
+
+Right click your desktop, under View, select Show Desktop icons. If the icons didn't show, right click it again, and again select Show Desktop Icons, then it will show them (bug in windows).
+
+<br>
+
+<hr>
+
+
+
+<h5 id="29">29. I made a nice desktop layout and I don't want to lose it.</h5><br>
+
+Omnimo 10 comes with a layouts manager. Click the triangle and select Layouts, you can save your layouts there.<br>
+
+You can also save Rainmeter themes by right clicking the tray icon, themes, manage themes and save your theme.
+
+
+
+
+
+
+
+
+
+<br>
+
+<hr>
+
+<h5 id="30">30. Some panels do not snap accordingly, how can I align them? </h5><br>
+
+You can hold the SHIFT key while dragging the panels to fine-position them. This tip along with many others can be found in the Omnimo Tips panel (recommended to read).
+
+<br>
+
+<hr>
+
+<h5 id="31">31. I accidentally set a Panel\Config to be Click Through, now I can't access it.</h5><br>
+
+
+
+Press and hold the CTRL button and right click the skin, then uncheck that option (thx brunovdbh)
+
+<br>
+
+<hr>
+
+<h5 id="32">32. My userpicture doesn't show</h5><br>
+
+Go to control panel, accounts and set your userpicture again
+
+<br>
+
+<hr>
+
+<h5 id="33">33. The Windows 8 shortcuts don't work</h5><br>
+
+You need to configure the locations for apps first. Each shortcut module has a settings icon where you can change the icon, location and action.
+
+<br>
+
+<hr>
+
+<h5 id="34">34. My Panels disappear when I click "Show Desktop" on Windows 7</h5><br>
+
+You can fix this by right clicking every panel, and under Position setting them to be "On Desktop". Using the background is not recommended with this method.
+
+<br>
+
+<hr>
+
+<h5 id="35">35. My Google Calendar isn't working / sorts incorrectly</h5><br>
+
+First, make sure you have the <a href="https://mega.co.nz/#!XcQQ2IZA!DiSn4J_kCZWxuucxIISdx0PAm0cc3RV9_EDHOoFpI9Y">latest fix</a> for the Google Calendar. After that, just follow this <a href="http://i.imgur.com/v4MARV4.png">screenshot guide</a> on how to set it up.
+
+<br>
+
+<hr>
+
+<h5 id="36">36. Which languages are available in Omnimo?</h5><br>
+
+Omnimo supports English, Spanish, German, Russian, Portuguese, French, Finnish and Dutch for now. If you want to be a volunteer translator, send us an <a href="mailto:omnimosupport@gmail.com">email</a>
+
+<br>
+
+<hr>
+
+<h5 id="37">37. MediaControl doesn't work with my media player, what to do?</h5><br>
+
+First of all, you need to make sure you're using one of these players and that you typed its setting correctly. (For example, Windows Media Player is WMP, iTunes is ITUNES, and so on) Here is a list of the players:
+<br><br>
+	<li><b>AIMP</b>: <code>PlayerName=AIMP</code><br>
+	Fully supported. Tested with AIMP 2.61.</li>
+
+	<li><b>foobar2000</b>: <code>PlayerName=CAD</code><br>
+	Fully supported. The <a href="http://poiru.github.com/foo-cad/">foo_cad plugin (download)</a> needs to be installed.</li>
+
+	<li><b>iTunes</b>: <code>PlayerName=iTunes</code><br>
+	Fully supported. Tested with iTunes 10.2.</li>
+
+	<li><b>J. River Media Center</b> and <b>Media Jukebox</b>: <code>PlayerName=CAD</code><br>
+	Fully supported through the CAD interface. The <a href="http://code.google.com/p/jr-intcad/">intcad plugin</a> needs to be installed.</li>
+
+	<li><b>MediaMonkey</b>: <code>PlayerName=MediaMonkey</code><br>
+	Fully supported. Tested with MediaMonkey 3.2.5.</li>
+
+	<li><b>MusicBee</b>: <code>PlayerName=CAD</code><br>
+	Fully supported. <a href="http://getmusicbee.com/download.html">MusicBee 1.2</a> (or higher) is required.</li>
+
+	<li><b>Winamp</b>: <code>PlayerName=Winamp</code><br>
+	Fully supported.</li>
+
+	<li><b>VLC</b>: <code>PlayerName=CAD</code><br>
+	Fully supported. The <a href="http://code.google.com/p/vlc-libcad">libcad plugin</a> for VLC must be installed.</li>
+
+	<li><b>WMP</b>: <code>PlayerName=WMP</code><br>
+	Fully supported, except for the <code>Repeat</code> / <code>Shuffle</code> types.</li>
+
+<br>
+
+<br>
+
+ ¯\(°_o)/¯ Didn't find what you're looking for? Contact <a href="mailto:omnimosupport@gmail.com" style="color:#444444;">Omnimo Support</a>
+ 
+ 
+ </div>
+
+	  
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- Modal -->
 
 
 
@@ -189,15 +700,18 @@
 	  
           
 
-	  	  <h3>If you liked Omnimo, please consider donating</h3>
-		  <p>Donations help keep the servers on</p>
+	  	  <h3 data-translate="donateModal">If you liked Omnimo, please consider donating or becoming a Patron</h3>
+		  <p data-translate="donateModalT">Donations help keep the servers on</p>
 	  
-	  
-	<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=fedia1%40gmail%2ecom&lc=US&item_name=Donate%20to%20Omnimo%20UI&currency_code=USD&bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">  <img src="img/donate.png" /></a>
 
 	
-	<p onClick="this.select();" ><b>BTC:</b> 1LrYwvooG6ckGYQB2a2fQwfpTxDn5Vzu2G</p>
-	  <p onClick="this.select();" ><b>ETH:</b> 0x0522F50dA5322DC3A71fA71D7ad064e4D27e33Fc</p>
+	<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=fedia1%40gmail%2ecom&lc=US&item_name=Donate%20to%20Omnimo%20UI&currency_code=USD&bn=PP-DonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">  <img src="img/donate.png" /></a>
+	  
+	 
+		<a target="_blank"  href="https://www.patreon.com/bePatron?u=34630675">  <img style="width:220px;" src="img/become_a_patron_button@2x.png" /></a>
+	 
+	
+	<br>
 	  
 	  
     </div>
@@ -219,6 +733,74 @@
 
 
 
+<!-- LightboxModal -->
+
+<div id="lightbox" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 8</div>
+     <img id="firstBig" src="img/fullsize/1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 8</div>
+     <img  id="secondBig" src="img/fullsize/2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 8</div>
+     <img id="thirdBig" src="img/fullsize/3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 8</div>
+     <img src="img/fullsize/4.jpg" style="width:100%">
+    </div>
+    
+	    
+    <div class="mySlides">
+      <div class="numbertext">5 / 8</div>
+     <img src="img/fullsize/5.jpg" style="width:100%">
+    </div>
+	
+		    
+    <div class="mySlides">
+      <div class="numbertext">6 / 8</div>
+     <img src="img/fullsize/6.jpg" style="width:100%">
+    </div>
+	
+		    
+    <div class="mySlides">
+      <div class="numbertext">7 / 8</div>
+     <img src="img/fullsize/7.jpg" style="width:100%">
+    </div>
+	
+		    
+    <div class="mySlides">
+      <div class="numbertext">8 / 8</div>
+     <img src="img/fullsize/8.jpg" style="width:100%">
+    </div>
+	
+	
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!--
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+-->
+  </div>
+</div>
+
+
+
 
 
 
@@ -229,33 +811,38 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       
+<span id="quickn" style="display:none;text-align:left;"><a onclick="$('#quickn').hide();$('#inst').hide();$('#dllinks').show();" href="#">◄</a> <span data-translate="quickinstall">Quick Install Instrutions</span></span>
+	   <button type="button" class="close" data-dismiss="modal">&times;</button>
 &nbsp;
       </div>
 	  
 	  
 
 	  
+	  
       <div class="modal-body" id="links" style="display:block;">
 	  
             <div id="dllinks" class="row">
-    <div class="col-md-6"><h4>FULL VERSION</h4><p>This version contains all panels and functionality / features</p>
+    <div class="col-md-6"><h4 data-translate="fullversion">FULL VERSION</h4><p data-translate="fullversionfeatures">This version contains all panels and functionality / features</p>
 	
-	<a type="button" class="btn btn-primary" target="_blank" onclick="window.location = 'Omnimo6.1.zip';$('#inst').show();$('#dllinks').hide();ga('send', 'event', 'navigation', 'click', 'Download');" data-toggle="modal" href="#">Download ZIP (25 MB)</a><br><br>
-	<sup><a target="_blank" onclick="ga('send', 'event', 'navigation', 'click', 'Download');" href="http://www.softpedia.com/get/System/System-Plugins/Omnimo.shtml">Mirror #1 Softpedia</a> | <a target="_blank" onclick="ga('send', 'event', 'navigation', 'click', 'Download');" href="https://mega.co.nz/#!qN43mIbI!RtLvmEghykqpPNRDzNfec3Yhrdx5sLTiszINMn3Z-F4">Mirror #2 mega.co.nz</a></sup>
+	<a type="button" class="btn btn-primary" target="_blank" onclick="$('#inst').show();$('#quickn').show();$('#dllinks').hide();$('#notstart').delay(5000).show();" data-toggle="modal" href="Omnimo10.zip">Download ZIP (25 MB)</a><br><br>
+	<sup><a target="_blank" href="#">Mirror #1</a> | <a target="_blank" href="#">Mirror #2</a></sup>
 	</div>
-	    <div class="col-md-6"><h4>LITE VERSION</h4><p>Too much of a commitment? Why not try the fun-sized version of Omnimo?</p><!--<p>Only the most necessary elements included (can always change to full version)</p>-->
-	<a type="button" class="btn btn-default" target="_blank" onclick="window.location = 'Omnimo6.1Lite.zip';$('#inst').show();$('#dllinks').hide();ga('send', 'event', 'navigation', 'click', 'Download-Lite');" data-toggle="modal" href="#">Download ZIP (4.5 MB)</a>
+	    <div class="col-md-6"><h4 data-translate="liteversion">LITE VERSION</h4>
+		
+		<p data-translate="comingsoon">Coming soon, please hang tight a bit!</p>
+		<!--<p>Only the most necessary elements included (can always change to full version)</p>-->
 	
-<br><br>
-	<sup><a target="_blank" href="https://mega.nz/#!rMxGWSDJ!reAcX2R9Y9kDyJKpAy-CT1_dkJTol6G8FvNXLEyHNro" onclick="ga('send', 'event', 'navigation', 'click', 'Download-Lite');" style="color:#ccc;">Mirror mega.co.nz</a></sup>
+	<button type="button" class="btn btn-secondary" data-translate="download">Download</button><br><br>
+	<sup><a href="#" style="color:#ccc;" data-translate="mirror">Mirror</a></sup>
 	</div>
 	
       </div>
 
 	  	   <div id="inst" style="display:none;">
 	   
-	   <h4 style="cursor:hand;text-align:left;" onclick="$('#inst').hide();$('#dllinks').show();"><a href="#"><-</a> Quick Install Instrutions</h4>
+	
 	   <table border="0" style="width:100%">
   <tr>
     <td><img style="width:143px;" src="img/1.png" /></td>
@@ -265,11 +852,13 @@
   </tr>
   <tr style="font-size:12px;">
 
-    <td><br>1. Download and<br>extract ZIP somewhere</td>
-    <td><br>2. Run Setup.exe (Ignore 3,4 if you have Rainmeter)</td>		
-    <td><br>3. Follow instructions to install Rainmeter</td>
- <td>4. Select Install</td>
+    <td><br>1. <span data-translate="downloadzip">Download and extract ZIP Archive<span></td>
+    <td><br>2. <span data-translate="runsetup">Run Setup.exe (Ignore 3,4 if you have Rainmeter)<span></td>		
+    <td><br>3. <span data-translate="followinstructions">Follow instructions to install Rainmeter<span></td>
+ <td>4. <span data-translate="selectinstall">Select Install</span></td>
 
+
+<a id="notstart" style="display:none;" href="http://fediafedia.com/omnimo/Omnimo10.zip">Download not starting? Click this direct link</a><br><br>
   </tr>
 
 </table>
@@ -305,33 +894,107 @@
 
 <!-- Modal End -->
 					
-					<a id="greylinks" data-toggle="modal" data-target="#myModal" href="#myModal"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>&nbsp; Video Overview </a>
+					<a id="greylinks" data-toggle="modal" data-target="#myModal" href="#myModal"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>&nbsp; <Span data-translate="videooverview">Video Overview</span> </a>
 					
 					&nbsp;&nbsp;&nbsp; 
 					
-					<a id="greylinks" target="_blank" href="https://www.youtube.com/watch?v=ZVDYOtkmzkA"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp; Tutorials</a>
+					<a id="greylinks" target="_blank" href="https://www.youtube.com/watch?v=Xx17SJ5-XBc"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp; <span data-translate="tutorials">Tutorials</span></a>
 					&nbsp;&nbsp;&nbsp; 
 					
-					<a id="greylinks"  href="more.html"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp; How to Install</a>&nbsp;&nbsp;&nbsp; 
-										<a id="greylinks"  data-toggle="modal"  data-target="#donateModal" href="#donateModal" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp; Donate</a>
+					<a id="greylinks"  href="more.html"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp; <span data-translate="learnmore">Learn More</a></a>&nbsp;&nbsp;&nbsp; 
+										<a id="greylinks"  data-toggle="modal"  data-target="#donateModal" href="#donateModal" ><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp; <span data-translate="donate">Donate</span></a>
 					</h3>
                 </div>
             </div>
+
+			 
             <div class="row text-center">
                 <div class="full col-md-4">
-<img src="img/screenshots/xyrfo.jpg">
+<a onclick="openModal();currentSlide(1)"><img id="first" src="img/screenshots/mainE.jpg"></a>
 				</div>
                 <div class="full col-md-4">
-<img src="img/screenshots/undersea.jpg">
+<a onclick="openModal();currentSlide(2)"><img  id="second" src="img/screenshots/undersea.jpg"></a>
 			   </div>
                 <div class="full col-md-4">
-<img src="img/screenshots/fly.jpg">
+<a onclick="openModal();currentSlide(3)"><img id="third" src="img/screenshots/summer.jpg"></a>
 				</div>
             </div>
+			
+			<script>
+var e = Math.floor(Math.random() * 8);
+  document.getElementById("first").src = "img/rotating/1/" + e + ".jpg";
+  document.getElementById("firstBig").src = "img/rotating/1/" + e + ".jpg";
+
+var d = Math.floor(Math.random() * 5);
+  document.getElementById("second").src = "img/rotating/2/" + d + ".jpg";
+    document.getElementById("secondBig").src = "img/rotating/2/" + d + ".jpg";
+
+var f = Math.floor(Math.random() * 7);
+  document.getElementById("third").src = "img/rotating/3/" + f + ".jpg";
+  
+    document.getElementById("thirdBig").src = "img/rotating/3/" + f + ".jpg";
+
+
+</script>
+						
+		  <div class="row text-center">
+			 <div class="full col-md-12">
+			<a> <img src="img/ultrawide.jpg"></a>
+			 </div>
+			 
+			 </div><br><br>
+			 		<center ><img id="anniversary" style="width:120px" src="img/10y/english.png" /></center>
         </div>
     </section>
 	
 	
+    <!-- Services Section -->
+    <section id="services" style="background:#f1f1f1;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" data-translate="whatsnew">What's new?</h2>
+                    <h3 class="section-subheading text-muted" data-translate="whatsnewT">Check out the new features we included in Omnimo 10</h3>
+	
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                       <img style="width:80px;" src="img/heart.png" />
+                    </span>
+                    <h4 class="service-heading" data-translate="totalredesign">Total Redesign</h4>
+                    <p class="text-muted" data-translate="totalredesignT">Icons, themes and resources have been updated to reflect the newest trends</p>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <img style="width:80px;" src="img/balloon.png" />
+                    </span>
+                    <h4 class="service-heading" data-translate="morefeatures">More features</h4>
+                    <p class="text-muted" data-translate="morefeaturesT">We removed things that are outdated... and added lots of new exciting stuff!</p>
+                </div>
+                <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <img style="width:80px;" src="img/2k.png" />
+                    </span>
+                    <h4 class="service-heading" data-translate="hdpi">HDPI / Ultrawide</h4>
+                    <p class="text-muted" data-translate="hdpiT">Everything supports scaling and HDPI Displays, including Ultrawide 21:9, 42:9</p>
+                </div>
+				
+				 <div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <img style="width:80px;" src="img/butterfly.png" />
+                    </span>
+                    <h4 class="service-heading" data-translate="bugs">Bug fixes and more</h4>
+                    <p class="text-muted" data-translate="bugsT">It's been a long time since we updated Omnimo. Now it's better than ever.</p>
+                </div>
+				
+            </div>
+	
+        </div>
+		
+    </section>
+
 	
 	 <!-- Services Section -->
     <section id="services">
@@ -340,14 +1003,14 @@
 
                 <div class="col-md-6">
 
-			<h3>Extensively Customizable</h3>
-<p>Omnimo comes with hundreds of widgets that you can use on your desktop. Everything can be customized precisely to your liking.</p>
+			<h3 data-translate="customizable">Customizable and Modern</h3>
+<p style="color:#aaa" data-translate="customizableT">Omnimo comes with hundreds of widgets that you can use on your desktop. Everything can be customized precisely to your liking.</p>
 
-<h3>Simple to Use and Manage</h3>
-<p>Easy installation, easy removal. 8<a href="http://omnimo.info/faq.html#36">*</a> Languages. An out of the box experience. All you need is imagination to arrange it the way you like.</p>
+<h3 data-translate="simple">Simple and fun to use</h3>
+<p style="color:#aaa" data-translate="simpleT">Easy installation, easy setup. 5 Languages. An out of the box experience. All you need is imagination to arrange it the way you like.</p>
 
-<h3>Light as a Feather</h3>
-<p>Despite being the most powerful suite, Omnimo is incredibly light on your PC resources. It won’t slow down your computer.</p>	
+<h3 data-translate="light">Light as a feather, yet so powerful</h3>
+<p style="color:#aaa" data-translate="lightT">Despite being the most powerful suite, Omnimo is incredibly light on your PC resources. It won’t slow down your computer if you use it right.</p>	
 				
 				
 			  </div>
@@ -383,48 +1046,13 @@
 							  
 			  </div>
 			  
-		<div style="color:grey;text-align:center;"><a href="http://imgur.com/a/nAWDo" target="_blank">View more &gt;</a></div>	  
+		<div style="color:grey;text-align:center;"><a href="http://imgur.com/a/nAWDo" target="_blank"><span data-translate="viewmore">View more</span> &gt;</a></div>	  
             </div>
         </div>
     </section>
 	
 	
 	
-
-    <!-- Services Section -->
-    <section id="services" style="background:#f1f1f1;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">What's new?</h2>
-                    <h3 class="section-subheading text-muted">Check out the new features we included in Omnimo 6.1</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                       <img style="width:80px;" src="img/heart.png" />
-                    </span>
-                    <h4 class="service-heading">Modernised Design</h4>
-                    <p class="text-muted">Icons, themes and resources have been updated to reflect the newest trends</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <img style="width:80px;" src="img/balloon.png" />
-                    </span>
-                    <h4 class="service-heading">Lite Version</h4>
-                    <p class="text-muted">Bloaty mega theme? No problem! We included a 4MB Lite version with bare essentials.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <img style="width:80px;" src="img/butterfly.png" />
-                    </span>
-                    <h4 class="service-heading">Bug fixes and more</h4>
-                    <p class="text-muted">It's been a long time since we updated Omnimo. Now it's better than ever.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
    
 
@@ -435,34 +1063,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-6">
-                    <a href="#">
+                    <a target="_blank" href="https://www.engadget.com/2010-03-30-omnimo-desktop-windows-given-fashion-makeover-with-phone-7-seri.html">
                         <img src="img/logos/engadget.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <a href="#">
+                    <a target="_blank" href="https://www.chip.de/downloads/Omnimo-UI-for-Rainmeter_42205127.html">
                         <img src="img/logos/chip.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <a href="#">
+                    <a target="_blank" href="https://www.computerbild.de/download/Omnimo-fuer-Rainmeter-5998067.html">
                         <img src="img/logos/computerbild.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
                 <div class="col-md-2 col-sm-6">
-                    <a href="#">
+                    <a target="_blank" href="https://www.softpedia.com/get/System/System-Plugins/Omnimo.shtml">
                         <img src="img/logos/softpedia.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
 				
 								<div class="col-md-2 col-sm-6">
-                    <a href="#">
+                    <a target="_blank" href="https://omnimo.en.softonic.com/">
                         <img src="img/logos/softonic.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
 				
 				<div class="col-md-2 col-sm-6">
-                    <a href="#">
+                    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">
                         <img src="img/logos/creative.png" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
@@ -476,32 +1104,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
- <span class="copyright">© 2018 <script language=JavaScript><!--
+                    <span class="copyright">© 2020 <script language=JavaScript><!--
 var ah=new Array()
 ah[0] ="Made with love by Xyrfo & fediaFedia"
-ah[1] ="Made with coffee by Xyrfo & fediaFedia"
-ah[2] ="Made with coolwhip by Xyrfo & fediaFedia"
+ah[1] ="Copyforward until 1992"
+ah[2] ="Not affiliated with the NSA"
+ah[3] ="Sponsor of the Joe Exotic '24 election"
+ah[4] ="As seen on TV"
+ah[5] ="Scratch here to reveal prize"
+ah[6] ="Not to be used on live cattle"
+ah[7] ="Made in Frankfurt, London and Helsinki"
+ah[8] ="In 216 countries"
+ah[9] ="Banned in New Zealand"
+ah[10] ="Our business is Life itself"
 
 var rN = Math.floor((ah.length)*Math.random());
 document.write(ah[rN])</script></span>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
+                   <!-- <ul class="list-inline social-buttons">
                         <li><a href="http://twitter.com/fediafedia">T</a>
                         </li>
                         <li><a href="http://facebook.com/omnimoui">F</a>
                         </li>
                         <li><a href="http://fediafedia.deviantart.com/">D</a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
 
-                        <li><a  onclick='alert("Software is provided as is without warranties of any kind\nUse at your own risk.");'>Terms of Use</a>
+                        <li><a  onclick='alert("Software is provided as is without warranties of any kind\nUse at your own risk.");' data-translate="termsofuse">Terms of Use</a>
                         </li>
 						
-						   <li><a href="http://github.com/fediaFedia/Omnimo/">Source Code on GitHub</a>
+						   <li><a href="http://github.com/fediaFedia/Omnimo/" data-translate="sourcecode">Source Code on GitHub</a>
                         </li>
                     </ul>
                 </div>
@@ -509,46 +1145,7 @@ document.write(ah[rN])</script></span>
         </div>
     </footer>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
 
-
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-	
-	
-	<script type='text/javascript'>//<![CDATA[ 
-$(function(){
-$('#box').keyup(function(){
-    var valThis = $(this).val().toLowerCase();
-    var noresult = 0;
-    if(valThis == ""){
-        $('.navList > li').show();
-        noresult = 1;
-	    $('.no-results-found').remove();
-    } else {
-        $('.navList > li').each(function(){
-            var text = $(this).text().toLowerCase();
-            var match = text.indexOf(valThis);
-            if (match >= 0) {
-                $(this).show();
-                noresult = 1;
-		        $('.no-results-found').remove();
-            } else {
-                $(this).hide();
-            }
-        });
-   };
-    if (noresult == 0) {
-        $(".navList").append('<li class="no-results-found">No results found.</li>');
-    }
-});
-});//]]>  
-
-</script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -556,6 +1153,47 @@ $('#box').keyup(function(){
 
 
 
+<script>
+function openModal() {
+  document.getElementById("lightbox").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
 
