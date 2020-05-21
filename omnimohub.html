@@ -68,15 +68,23 @@ img {border:none;}
 <br /><br />
 
 <center><span id="anni"><img  src='img/oobe/en-us.png' /></span></center>
-<h2 id="t1">Thanks for installing Omnimo 10</h2>
+<h2 id="t1">New version is available!</h2>
 
 <!--<h1>Omnimo Info Hub&nbsp;&nbsp;&nbsp;<a href="http://twitter.com/fediafedia" target="_blank"><img src="http://i.imgur.com/m2kIHOF.png" alt="Twitter" style="border:0;"/></a>&nbsp;<a href="http://facebook.com/omnimoui" target="_blank"><img src="http://i.imgur.com/O4tezxY.png" style="border:0;" alt="Facebook" /></a></h1>-->
-<h3 id="t2">Here's something to get you started</h3>
+<h3 id="t2">Please download Omnimo 10. We've updated it for our 10 Year Anniversary</h3>
+
 <br><br><center><a style="border:none;" href="#info">
 
 
 
 <img style="border:none;" src="img/oobe/down.png" /></a></center>
+
+<div id="omnimo10">
+<a target="_blank" href="http://omnimo.info">http://omnimo.info</a><br><br>
+Omnimo 10 is a major improvement.<br>Just see for yourself... :)<br><br>
+<a href="https://youtu.be/S3sJ1Rh185Q" target="_blank"><img style="width:350px;" src="img/promo.jpg"></a><br><br>Here are some of the improvements:
+</div>
+
 <br><br><br><br>
 <center id="info">
  <table style="width:100%;text-align:center;">
@@ -222,6 +230,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <script src="index.js"></script>
 <script>
 
+var t1en = "Thanks for installing Omnimo 10";
+var t2en = "Here's something to get you started";
+var t3en = "Right-click any Item with your Mouse to open the Context Menu"
+var t4en = "Many items have alternative designs. Right-click and select 'Alternative' to switch"
+var t5en = "Clicking the Desktop Panel will hide Omnimo, clicking again will show it"
+var t6en = "Clicking the + or “Add Items” will always bring up the Gallery."
+var t7en = "Video Overview (EN)"
+var t8en = "Example Desktops"
+var t9en = "NOTHING TO SEE HERE"
+var t10en = "Click the 'help' icon in the Gallery for more information."
+var t11en = "Change the appearance of elements in the Gallery"
+var t12en = "You can move elements anywhere on your screen"
+
 
 var t1ru = "Наслаждайтесь Omnimo!";
 var t2ru = "Вот несколько советов, которые помогут вам";
@@ -308,8 +329,6 @@ urlp=[];s=location.toString().split('?');s=s[1].split('&');for(i=0;i<s.length;i+
 
 
 
-
-
 if (urlp['lang'] == "ru-ru") {
 
 
@@ -327,6 +346,9 @@ document.getElementById("t9").innerHTML = t9ru;
 document.getElementById("t10").innerHTML = t10ru; 
 document.getElementById("t11").innerHTML = t11ru; 
 document.getElementById("t12").innerHTML = t12ru; 
+document.getElementById("omnimo10").style.display = "none"; 
+
+
 }
 
 else if (urlp['lang'] == "de-de") {
@@ -343,6 +365,7 @@ document.getElementById("t9").innerHTML = t9de;
 document.getElementById("t10").innerHTML = t10de; 
 document.getElementById("t11").innerHTML = t11de; 
 document.getElementById("t12").innerHTML = t12de; 
+document.getElementById("omnimo10").style.display = "none"; 
 }
 
 else if (urlp['lang'] == "es-es") {
@@ -359,6 +382,7 @@ document.getElementById("t9").innerHTML = t9es;
 document.getElementById("t10").innerHTML = t10es; 
 document.getElementById("t11").innerHTML = t11es; 
 document.getElementById("t12").innerHTML = t12es; 
+document.getElementById("omnimo10").style.display = "none"; 
 }
 
 else if (urlp['lang'] == "nl-nl") {
@@ -375,6 +399,7 @@ document.getElementById("t9").innerHTML = t9nl;
 document.getElementById("t10").innerHTML = t10nl; 
 document.getElementById("t11").innerHTML = t11nl; 
 document.getElementById("t12").innerHTML = t12nl; 
+document.getElementById("omnimo10").style.display = "none"; 
 }
 
 
@@ -392,6 +417,7 @@ document.getElementById("t9").innerHTML = t9fr;
 document.getElementById("t10").innerHTML = t10fr; 
 document.getElementById("t11").innerHTML = t11fr; 
 document.getElementById("t12").innerHTML = t12fr; 
+document.getElementById("omnimo10").style.display = "none"; 
 }
 
 
@@ -409,16 +435,44 @@ document.getElementById("t9").innerHTML = t9pt;
 document.getElementById("t10").innerHTML = t10pt; 
 document.getElementById("t11").innerHTML = t11pt; 
 document.getElementById("t12").innerHTML = t12pt; 
+document.getElementById("omnimo10").style.display = "none"; 
 }
 
-else {}
+
+
+else if (urlp['lang'] == "en-us") {
+document.getElementById("anni").innerHTML = "<img src='img/oobe/en-us.png' />"; 
+document.getElementById("t1").innerHTML = t1en; 
+document.getElementById("t2").innerHTML = t2en; 
+document.getElementById("t3").innerHTML = t3en; 
+document.getElementById("t4").innerHTML = t4en; 
+document.getElementById("t5").innerHTML = t5en; 
+document.getElementById("t6").innerHTML = t6en; 
+document.getElementById("t7").innerHTML = t7en; 
+document.getElementById("t8").innerHTML = t8en; 
+document.getElementById("t9").innerHTML = t9en; 
+document.getElementById("t10").innerHTML = t10en; 
+document.getElementById("t11").innerHTML = t11en; 
+document.getElementById("t12").innerHTML = t12en; 
+document.getElementById("omnimo10").style.display = "none"; 
+}
+
+else {
+
+
+
+}
 
 
 if (urlp['theme'] == "Dark") {document.body.style.backgroundColor = "#141414";document.body.style.color = "#fff";}
 
 else if (urlp['theme'] == "Light") {document.body.style.backgroundColor = "#fff";document.body.style.color = "#141414";}
 
-else {}
+else {
+
+
+
+}
 
 
 
