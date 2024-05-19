@@ -1133,7 +1133,7 @@ var f = Math.floor(Math.random() * 7);
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">© 2020 <script language=JavaScript><!--
+                    <span class="copyright">© <span id="year"></span> <script language=JavaScript><!--
 var ah=new Array()
 ah[0] ="Made with love by Xyrfo & fediaFedia"
 ah[1] ="Copyforward until 1992"
@@ -1222,6 +1222,10 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+	
 </script>
 
 </body>
