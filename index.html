@@ -1148,7 +1148,9 @@ ah[9] ="Banned in New Zealand"
 ah[10] ="Our business is Life itself"
 
 var rN = Math.floor((ah.length)*Math.random());
-document.write(ah[rN])</script></span>
+document.write(ah[rN]);
+document.getElementById("year").innerHTML = new Date().getFullYear();
+		    </script></span>
                 </div>
                 <div class="col-md-4">
                    <!-- <ul class="list-inline social-buttons">
@@ -1223,7 +1225,7 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-document.getElementById("year").innerHTML = new Date().getFullYear();
+
 
 	
 </script>
